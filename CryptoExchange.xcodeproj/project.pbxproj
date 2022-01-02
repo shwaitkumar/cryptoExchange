@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		660A372B2781B37B00CC6DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A372A2781B37B00CC6DD3 /* AppDelegate.swift */; };
-		660A372D2781B37B00CC6DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A372C2781B37B00CC6DD3 /* SceneDelegate.swift */; };
-		660A372F2781B37B00CC6DD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A372E2781B37B00CC6DD3 /* ViewController.swift */; };
 		660A37322781B37B00CC6DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660A37302781B37B00CC6DD3 /* Main.storyboard */; };
 		660A37342781B37D00CC6DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660A37332781B37D00CC6DD3 /* Assets.xcassets */; };
 		660A37372781B37D00CC6DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660A37352781B37D00CC6DD3 /* LaunchScreen.storyboard */; };
+		6680ADCB2781B6DD00FB1E40 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADCA2781B6DD00FB1E40 /* BaseUIViewController.swift */; };
+		6680ADCE2781B8E500FB1E40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADCD2781B8E500FB1E40 /* LoginViewController.swift */; };
+		6680ADD02781DCAF00FB1E40 /* LoginWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADCF2781DCAF00FB1E40 /* LoginWithEmailViewController.swift */; };
+		6680ADD22781E4D900FB1E40 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADD12781E4D900FB1E40 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		660A37272781B37B00CC6DD3 /* CryptoExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		660A372A2781B37B00CC6DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		660A372C2781B37B00CC6DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		660A372E2781B37B00CC6DD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		660A37312781B37B00CC6DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		660A37332781B37D00CC6DD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		660A37362781B37D00CC6DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		660A37382781B37D00CC6DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6680ADCA2781B6DD00FB1E40 /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		6680ADCD2781B8E500FB1E40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6680ADCF2781DCAF00FB1E40 /* LoginWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailViewController.swift; sourceTree = "<group>"; };
+		6680ADD12781E4D900FB1E40 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +61,32 @@
 			isa = PBXGroup;
 			children = (
 				660A372A2781B37B00CC6DD3 /* AppDelegate.swift */,
-				660A372C2781B37B00CC6DD3 /* SceneDelegate.swift */,
-				660A372E2781B37B00CC6DD3 /* ViewController.swift */,
+				6680ADC92781B6B200FB1E40 /* Helper Classes */,
+				6680ADCC2781B8B500FB1E40 /* View Controllers */,
 				660A37302781B37B00CC6DD3 /* Main.storyboard */,
 				660A37332781B37D00CC6DD3 /* Assets.xcassets */,
 				660A37352781B37D00CC6DD3 /* LaunchScreen.storyboard */,
 				660A37382781B37D00CC6DD3 /* Info.plist */,
 			);
 			path = CryptoExchange;
+			sourceTree = "<group>";
+		};
+		6680ADC92781B6B200FB1E40 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6680ADCA2781B6DD00FB1E40 /* BaseUIViewController.swift */,
+			);
+			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		6680ADCC2781B8B500FB1E40 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6680ADCD2781B8E500FB1E40 /* LoginViewController.swift */,
+				6680ADCF2781DCAF00FB1E40 /* LoginWithEmailViewController.swift */,
+				6680ADD12781E4D900FB1E40 /* RegisterViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				660A372F2781B37B00CC6DD3 /* ViewController.swift in Sources */,
+				6680ADCE2781B8E500FB1E40 /* LoginViewController.swift in Sources */,
+				6680ADD22781E4D900FB1E40 /* RegisterViewController.swift in Sources */,
+				6680ADD02781DCAF00FB1E40 /* LoginWithEmailViewController.swift in Sources */,
 				660A372B2781B37B00CC6DD3 /* AppDelegate.swift in Sources */,
-				660A372D2781B37B00CC6DD3 /* SceneDelegate.swift in Sources */,
+				6680ADCB2781B6DD00FB1E40 /* BaseUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,14 +319,16 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cryptoExchange.ios.CryptoExchange;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryptoExchange.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,14 +349,16 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cryptoExchange.ios.CryptoExchange;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cryptoExchange.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
