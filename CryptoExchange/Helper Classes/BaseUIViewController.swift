@@ -9,6 +9,8 @@ import UIKit
 
 class BaseUIViewController: UIViewController {
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -80,10 +82,19 @@ class BaseUIViewController: UIViewController {
     
     func setButtonShadow(btn: UIButton, shadowColor: String) {
         
-        btn.layer.shadowRadius = 20
+        btn.layer.shadowRadius = 8
         btn.layer.shadowOffset = .zero
-        btn.layer.shadowOpacity = 0.3
+        btn.layer.shadowOpacity = 0.20
         btn.layer.shadowColor = UIColor(named: shadowColor)?.cgColor
+
+    }
+    
+    func setViewShadow(view: UIView, shadowColor: String) {
+        
+        view.layer.shadowRadius = 8
+        view.layer.shadowOffset = .zero
+        view.layer.shadowOpacity = 0.20
+        view.layer.shadowColor = UIColor(named: shadowColor)?.cgColor
 
     }
   

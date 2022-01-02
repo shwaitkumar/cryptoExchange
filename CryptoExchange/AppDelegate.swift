@@ -22,12 +22,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         self.pushToLoginViewController()
+//        self.pushToHomeViewController()
         
         return true
     }
-
+    
     func pushToLoginViewController() -> Void {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        let nc = UINavigationController.init(rootViewController: vc)
+        self.window?.rootViewController = nc
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func pushToPinViewController() -> Void {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PinViewController") as! PinViewController
+        let nc = UINavigationController.init(rootViewController: vc)
+        self.window?.rootViewController = nc
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func pushToHomeViewController() -> Void {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         let nc = UINavigationController.init(rootViewController: vc)
         self.window?.rootViewController = nc
         self.window?.makeKeyAndVisible()

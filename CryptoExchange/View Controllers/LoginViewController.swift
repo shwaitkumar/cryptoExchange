@@ -16,9 +16,12 @@ class LoginViewController : BaseUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setButtonShadow(btn: btnLogin, shadowColor: "yellowPop")
-        setButtonShadow(btn: btnSignUp, shadowColor: "yellowPop")
-        setButtonShadow(btn: btnTnC, shadowColor: "yellowPop")
+        setButtonShadow(btn: btnLogin, shadowColor: "whitePop")
+        setButtonShadow(btn: btnSignUp, shadowColor: "whitePop")
+        setButtonShadow(btn: btnTnC, shadowColor: "whitePop")
+        
+        btnLogin.layer.cornerRadius = 4
+        btnSignUp.layer.cornerRadius = 4
         
     }
     

@@ -15,6 +15,8 @@
 		6680ADCE2781B8E500FB1E40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADCD2781B8E500FB1E40 /* LoginViewController.swift */; };
 		6680ADD02781DCAF00FB1E40 /* LoginWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADCF2781DCAF00FB1E40 /* LoginWithEmailViewController.swift */; };
 		6680ADD22781E4D900FB1E40 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADD12781E4D900FB1E40 /* RegisterViewController.swift */; };
+		6680ADD42781F43400FB1E40 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADD32781F43400FB1E40 /* PinViewController.swift */; };
+		6680ADD62782087C00FB1E40 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADD52782087C00FB1E40 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		6680ADCD2781B8E500FB1E40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6680ADCF2781DCAF00FB1E40 /* LoginWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailViewController.swift; sourceTree = "<group>"; };
 		6680ADD12781E4D900FB1E40 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6680ADD32781F43400FB1E40 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
+		6680ADD52782087C00FB1E40 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				6680ADCD2781B8E500FB1E40 /* LoginViewController.swift */,
 				6680ADCF2781DCAF00FB1E40 /* LoginWithEmailViewController.swift */,
 				6680ADD12781E4D900FB1E40 /* RegisterViewController.swift */,
+				6680ADD32781F43400FB1E40 /* PinViewController.swift */,
+				6680ADD52782087C00FB1E40 /* HomeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -162,8 +168,10 @@
 			files = (
 				6680ADCE2781B8E500FB1E40 /* LoginViewController.swift in Sources */,
 				6680ADD22781E4D900FB1E40 /* RegisterViewController.swift in Sources */,
+				6680ADD42781F43400FB1E40 /* PinViewController.swift in Sources */,
 				6680ADD02781DCAF00FB1E40 /* LoginWithEmailViewController.swift in Sources */,
 				660A372B2781B37B00CC6DD3 /* AppDelegate.swift in Sources */,
+				6680ADD62782087C00FB1E40 /* HomeViewController.swift in Sources */,
 				6680ADCB2781B6DD00FB1E40 /* BaseUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
