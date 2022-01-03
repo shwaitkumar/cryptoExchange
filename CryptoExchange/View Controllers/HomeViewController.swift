@@ -138,4 +138,11 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         
     }
     
+    @IBAction func wishlistCardTapped(sender: UITapGestureRecognizer) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CryptoDetailedViewController") as! CryptoDetailedViewController
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 }

@@ -1941,7 +1941,7 @@ Crypto Exchange</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="728"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CryptDetailsTableViewCell" id="sC9-ba-kCX" customClass="CryptDetailsTableViewCell" customModule="Cryptore" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CryptDetailsTableViewCell" id="sC9-ba-kCX" customClass="CryptDetailsTableViewCell" customModule="CryptoExchange" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="952"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sC9-ba-kCX" id="l22-Q7-gy3">
@@ -2232,9 +2232,6 @@ Crypto Exchange</string>
                                                                 <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
                                                                 <color key="baseForegroundColor" name="backgroundPop"/>
                                                             </buttonConfiguration>
-                                                            <connections>
-                                                                <action selector="btnDeposit:" destination="gvW-Jv-SyU" eventType="touchUpInside" id="aWK-CW-VUO"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -2492,28 +2489,6 @@ different?</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="btnAboutExpand" destination="Znr-0I-6Eg" id="bFt-pj-ciU"/>
-                                            <outlet property="btnReasoningExpand" destination="FRz-Dg-7fh" id="LoF-82-0Lq"/>
-                                            <outlet property="ivCoinIcon" destination="HJI-xX-Zfm" id="V6D-Dg-2yv"/>
-                                            <outlet property="lbl1DHighestCap" destination="ZFD-64-31K" id="NTR-td-N1C"/>
-                                            <outlet property="lbl1DLowestCap" destination="qpo-zY-dLU" id="jdL-5W-g06"/>
-                                            <outlet property="lblAveragePrice" destination="Fqd-T6-jI9" id="TVY-Ab-PjR"/>
-                                            <outlet property="lblCirculatingSupply" destination="ccR-YC-5YZ" id="ZeE-T9-ymT"/>
-                                            <outlet property="lblCoinBalance" destination="TqA-K4-5lS" id="ovD-6e-tzi"/>
-                                            <outlet property="lblCoinName" destination="cwm-z1-nrt" id="SGW-yU-Ay9"/>
-                                            <outlet property="lblCurrentValue" destination="ccs-XZ-ySf" id="vsI-iP-DTz"/>
-                                            <outlet property="lblInvestedValue" destination="Gvq-Ey-ldH" id="FSK-i4-2iX"/>
-                                            <outlet property="lblMarketCap" destination="H0u-yx-L6U" id="lDN-SD-aWB"/>
-                                            <outlet property="lblMarketRank" destination="bPu-f2-9Fd" id="Vwh-L7-Qpj"/>
-                                            <outlet property="lblTotalSupply" destination="spC-Fa-7P5" id="GTz-DB-MG3"/>
-                                            <outlet property="lblYourPercentGainOrLoss" destination="2CK-pt-oqW" id="jHI-8z-dKi"/>
-                                            <outlet property="viewAbout" destination="dwl-hE-NNe" id="UoD-5v-Kuf"/>
-                                            <outlet property="viewAboutExpandable" destination="uKL-yO-XKg" id="hnK-qP-SPi"/>
-                                            <outlet property="viewHightestOrLowestPrice" destination="ig0-4W-Q97" id="62T-tf-ln8"/>
-                                            <outlet property="viewPriceFluctuationReasoning" destination="umE-XQ-tqn" id="OYX-qd-1q9"/>
-                                            <outlet property="viewPriceFluctuationReasoningExpandable" destination="TJD-cl-zXh" id="Zno-HT-2fH"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
