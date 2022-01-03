@@ -62,6 +62,9 @@ class HomeViewController : BaseUIViewController {
         let tapWithdraw = UITapGestureRecognizer(target: self, action:  #selector(self.withdrawButtonTapped))
         viewWithdrawMoney.addGestureRecognizer(tapWithdraw)
         
+        let tapReferAndEarn = UITapGestureRecognizer(target: self, action:  #selector(self.viewReferAndEarnTapped))
+        viewReferAndEarn.addGestureRecognizer(tapReferAndEarn)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,6 +90,12 @@ class HomeViewController : BaseUIViewController {
 
         let vc = storyboard?.instantiateViewController(withIdentifier: "WithdrawMoneyViewController") as! WithdrawMoneyViewController
         navigationController?.pushViewController(vc, animated: true)
+
+    }
+    
+    @IBAction func viewReferAndEarnTapped(sender: UITapGestureRecognizer){
+
+       performSegue(withIdentifier: "toReferAndEarn", sender: nil)
 
     }
     
