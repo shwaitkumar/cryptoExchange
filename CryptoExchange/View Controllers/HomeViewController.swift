@@ -40,6 +40,9 @@ class HomeViewController : BaseUIViewController {
         setViewShadow(view: viewSendCrypto, shadowColor: "whitePop")
         setViewShadow(view: viewReceiveCrypto, shadowColor: "whitePop")
         setViewShadow(view: viewConvertCrypto, shadowColor: "whitePop")
+        setViewShadow(view: viewDepositMoney, shadowColor: "whitePop")
+        setViewShadow(view: viewWithdrawMoney, shadowColor: "whitePop")
+        setViewShadow(view: viewReferAndEarn, shadowColor: "whitePop")
         
         self.cvWatchlist.delegate = self
         self.cvPopularCoins.delegate = self
@@ -91,16 +94,26 @@ class HomeViewController : BaseUIViewController {
 
 class WatchListCollectionViewCell : UICollectionViewCell {
     
+    @IBOutlet weak var viewCardWatchlist: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        viewCardWatchlist.layer.cornerRadius = 12
+        
     }
     
 }
 
 class PopularCoinsCollectionViewCell : UICollectionViewCell {
     
+    @IBOutlet weak var viewCardPopularCoins: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        viewCardPopularCoins.layer.cornerRadius = 12
+        
     }
     
 }
@@ -128,6 +141,10 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WatchListCollectionViewCell", for: indexPath) as! WatchListCollectionViewCell
             
+            let tapCoinCardCell = UITapGestureRecognizer(target: self, action:  #selector(self.coinCardTapped))
+            cell.viewCardWatchlist.tag = indexPath.row
+            cell.viewCardWatchlist.addGestureRecognizer(tapCoinCardCell)
+            
             return cell
             
         }
@@ -135,13 +152,17 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCoinsCollectionViewCell", for: indexPath) as! PopularCoinsCollectionViewCell
             
+            let tapCoinCardCell = UITapGestureRecognizer(target: self, action:  #selector(self.coinCardTapped))
+            cell.viewCardPopularCoins.tag = indexPath.row
+            cell.viewCardPopularCoins.addGestureRecognizer(tapCoinCardCell)
+            
             return cell
             
         }
         
     }
     
-    @IBAction func wishlistCardTapped(sender: UITapGestureRecognizer) {
+    @IBAction func coinCardTapped(sender: UITapGestureRecognizer) {
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "CryptoDetailedViewController") as! CryptoDetailedViewController
         navigationController?.pushViewController(vc, animated: true)
