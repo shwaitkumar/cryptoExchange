@@ -47,6 +47,41 @@ class HomeViewController : BaseUIViewController {
         viewDepositMoney.layer.cornerRadius = 4
         viewWithdrawMoney.layer.cornerRadius = 4
         
+        let tapPersonalView = UITapGestureRecognizer(target: self, action:  #selector(self.viewPersonalTapped))
+        viewPersonal.addGestureRecognizer(tapPersonalView)
+        
+        let tapDeposit = UITapGestureRecognizer(target: self, action:  #selector(self.depositButtonTapped))
+        viewDepositMoney.addGestureRecognizer(tapDeposit)
+        
+        let tapWithdraw = UITapGestureRecognizer(target: self, action:  #selector(self.withdrawButtonTapped))
+        viewWithdrawMoney.addGestureRecognizer(tapWithdraw)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.navigationBar.isHidden = true
+        
+    }
+    
+    @IBAction func viewPersonalTapped(sender: UITapGestureRecognizer){
+
+       performSegue(withIdentifier: "toTotalWorth", sender: nil)
+
+    }
+    
+    @IBAction func depositButtonTapped(sender: UITapGestureRecognizer){
+
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DepositMoneyViewController") as! DepositMoneyViewController
+        navigationController?.pushViewController(vc, animated: true)
+
+    }
+    
+    @IBAction func withdrawButtonTapped(sender: UITapGestureRecognizer){
+
+        let vc = storyboard?.instantiateViewController(withIdentifier: "WithdrawMoneyViewController") as! WithdrawMoneyViewController
+        navigationController?.pushViewController(vc, animated: true)
+
     }
     
 }

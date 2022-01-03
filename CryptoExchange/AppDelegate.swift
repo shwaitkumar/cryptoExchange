@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        self.pushToLoginViewController()
-//        self.pushToHomeViewController()
+//        self.pushToLoginViewController()
+        self.pushToHomeViewController()
         
         return true
     }
