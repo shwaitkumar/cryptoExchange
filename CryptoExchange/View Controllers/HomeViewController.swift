@@ -23,8 +23,12 @@ class HomeViewController : BaseUIViewController {
     
     @IBOutlet weak var ivUserPic: UIImageView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.contentInsetAdjustmentBehavior = .never
         
         viewUserPicBorder.layer.cornerRadius = 28
         viewSendCrypto.layer.cornerRadius = 28
@@ -42,10 +46,9 @@ class HomeViewController : BaseUIViewController {
         self.cvWatchlist.dataSource = self
         self.cvPopularCoins.dataSource = self
         
-        viewPersonal.layer.cornerRadius = 4
-        viewReferAndEarn.layer.cornerRadius = 4
-        viewDepositMoney.layer.cornerRadius = 4
-        viewWithdrawMoney.layer.cornerRadius = 4
+        viewReferAndEarn.layer.cornerRadius = 12
+        viewDepositMoney.layer.cornerRadius = 8
+        viewWithdrawMoney.layer.cornerRadius = 8
         
         let tapPersonalView = UITapGestureRecognizer(target: self, action:  #selector(self.viewPersonalTapped))
         viewPersonal.addGestureRecognizer(tapPersonalView)

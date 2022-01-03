@@ -36,7 +36,7 @@ class PinViewController : BaseUIViewController {
         setButtonShadow(btn: btnContinue, shadowColor: "whitePop")
         setButtonShadow(btn: btnForgotPin, shadowColor: "whitePop")
         
-        btnContinue.layer.cornerRadius = 4
+        btnContinue.layer.cornerRadius = 8
         
     }
     

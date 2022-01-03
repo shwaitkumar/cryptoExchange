@@ -35,8 +35,8 @@ class LoginWithEmailViewController: BaseUIViewController {
         ivCheckMark.isHidden = true
         [tfEmail].forEach({ $0.addTarget(self, action: #selector(showCheckMark), for: .editingChanged)})
         
-        btnLogin.layer.cornerRadius = 4
-        btnForgotPassword.layer.cornerRadius = 4
+        btnLogin.layer.cornerRadius = 8
+        btnForgotPassword.layer.cornerRadius = 8
         
     }
     

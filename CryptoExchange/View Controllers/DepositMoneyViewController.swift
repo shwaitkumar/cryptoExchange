@@ -16,7 +16,7 @@ class DepositMoneyViewController : BaseUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnDeposit.layer.cornerRadius = 4
+        btnDeposit.layer.cornerRadius = 8
         
         self.tblDepositMoney.delegate = self
         self.tblDepositMoney.dataSource = self

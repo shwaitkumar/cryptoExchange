@@ -20,8 +20,8 @@ class LoginViewController : BaseUIViewController {
         setButtonShadow(btn: btnSignUp, shadowColor: "whitePop")
         setButtonShadow(btn: btnTnC, shadowColor: "whitePop")
         
-        btnLogin.layer.cornerRadius = 4
-        btnSignUp.layer.cornerRadius = 4
+        btnLogin.layer.cornerRadius = 8
+        btnSignUp.layer.cornerRadius = 8
         
     }
     

@@ -16,7 +16,7 @@ class WithdrawMoneyViewController : BaseUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        btnWithdraw.layer.cornerRadius = 4
+        btnWithdraw.layer.cornerRadius = 8
         
         self.tblWithdrawMoney.delegate = self
         self.tblWithdrawMoney.dataSource = self

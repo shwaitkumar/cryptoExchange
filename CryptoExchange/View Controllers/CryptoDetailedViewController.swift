@@ -22,11 +22,11 @@ extension CryptoDetailedViewController : UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CryptDetailsTableViewCell", for: indexPath) as! CryptDetailsTableViewCell
-            
-            return cell
-    }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CryptDetailsTableViewCell", for: indexPath) as! CryptDetailsTableViewCell
+        
+        return cell
+}
+        
     
 }
 
