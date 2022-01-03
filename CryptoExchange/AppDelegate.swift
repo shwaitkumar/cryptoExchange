@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        self.pushToLoginViewController()
         self.pushToHomeViewController()
+//        self.pushToPortfolioViewController()
         
         return true
     }
@@ -42,7 +43,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func pushToHomeViewController() -> Void {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        vc.selectedIndex = 0
+        let nc = UINavigationController.init(rootViewController: vc)
+        self.window?.rootViewController = nc
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func pushToPortfolioViewController() -> Void {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PortfolioViewController") as! PortfolioViewController
         let nc = UINavigationController.init(rootViewController: vc)
         self.window?.rootViewController = nc
         self.window?.makeKeyAndVisible()
