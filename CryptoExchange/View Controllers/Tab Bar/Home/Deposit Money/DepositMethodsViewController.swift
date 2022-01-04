@@ -66,7 +66,8 @@ extension DepositMethodsViewController : UITableViewDelegate, UITableViewDataSou
         }
         else if indexPath.row == 1 {
             
-            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "PayViaBankTransferViewController") as! PayViaBankTransferViewController
+            navigationController?.pushViewController(vc, animated: true)
             
         }
         else {
