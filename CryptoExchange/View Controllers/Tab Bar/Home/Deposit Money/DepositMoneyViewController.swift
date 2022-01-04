@@ -33,6 +33,33 @@ class DepositMoneyViewController : BaseUIViewController {
     }
     
     @IBAction func btnDeposit(_ sender: UIButton) {
+        
+        let indexPath = IndexPath(row: 0, section: 0)
+        let cell = tblDepositMoney.cellForRow(at: indexPath)
+        
+        let amount = cell!.viewWithTag(1) as! UITextField
+        
+        debugPrint("amount - ",amount.text!)
+        
+        let amountInString = amount.text!
+        
+        var amountInDouble = Double(amountInString)
+        
+        if amountInString == "" {
+            amountInDouble = 0.0
+        }
+        
+        if amountInDouble! >= 100 {
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "DepositMethodsViewController") as! DepositMethodsViewController
+            vc.amount = amount.text!
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        else {
+            showAlert(Message: "Amount cannot be empty or less than ₹100", Title: "Crypto Exchange")
+        }
+        
     }
     
 }
@@ -50,27 +77,27 @@ extension DepositMoneyViewController : UITableViewDelegate, UITableViewDataSourc
         if btntag == 1 {
             setDefault()
             cell.btn100.backgroundColor = UIColor(named: "bluePop")
-            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+            cell.tfDeposit.text = String(format: "%.1f", tfAmount)
         }
         else if btntag == 2 {
             setDefault()
             cell.btn500.backgroundColor = UIColor(named: "bluePop")
-            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+            cell.tfDeposit.text = String(format: "%.1f", tfAmount)
         }
         else if btntag == 3 {
             setDefault()
             cell.btn2000.backgroundColor = UIColor(named: "bluePop")
-            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+            cell.tfDeposit.text = String(format: "%.1f", tfAmount)
         }
         else if btntag == 4 {
             setDefault()
             cell.btn10000.backgroundColor = UIColor(named: "bluePop")
-            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+            cell.tfDeposit.text = String(format: "%.1f", tfAmount)
         }
         else if btntag == 5 {
             setDefault()
             cell.btn50000.backgroundColor = UIColor(named: "bluePop")
-            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+            cell.tfDeposit.text = String(format: "%.1f", tfAmount)
         }
         else {
             setDefault()

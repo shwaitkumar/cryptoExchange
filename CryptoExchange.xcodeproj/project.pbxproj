@@ -16,6 +16,7 @@
 		660A37342781B37D00CC6DD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660A37332781B37D00CC6DD3 /* Assets.xcassets */; };
 		660A37372781B37D00CC6DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660A37352781B37D00CC6DD3 /* LaunchScreen.storyboard */; };
 		66351A8B27845CFA001DD26C /* BuyOrSellCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66351A8A27845CFA001DD26C /* BuyOrSellCoinViewController.swift */; };
+		66351A8D27847C47001DD26C /* DepositMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66351A8C27847C47001DD26C /* DepositMethodsViewController.swift */; };
 		664CE0A2278368ED004A9EA0 /* ReferAndEarnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CE0A1278368ED004A9EA0 /* ReferAndEarnViewController.swift */; };
 		664CE0A427837246004A9EA0 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CE0A327837246004A9EA0 /* PortfolioViewController.swift */; };
 		664CE0A627838BE0004A9EA0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CE0A527838BE0004A9EA0 /* TabBarViewController.swift */; };
@@ -42,6 +43,7 @@
 		660A37362781B37D00CC6DD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		660A37382781B37D00CC6DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66351A8A27845CFA001DD26C /* BuyOrSellCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyOrSellCoinViewController.swift; sourceTree = "<group>"; };
+		66351A8C27847C47001DD26C /* DepositMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositMethodsViewController.swift; sourceTree = "<group>"; };
 		664CE0A1278368ED004A9EA0 /* ReferAndEarnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferAndEarnViewController.swift; sourceTree = "<group>"; };
 		664CE0A327837246004A9EA0 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		664CE0A527838BE0004A9EA0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,23 @@
 			path = CryptoExchange;
 			sourceTree = "<group>";
 		};
+		66351A8E27847C69001DD26C /* Deposit Money */ = {
+			isa = PBXGroup;
+			children = (
+				6607B999278305CA003B5D16 /* DepositMoneyViewController.swift */,
+				66351A8C27847C47001DD26C /* DepositMethodsViewController.swift */,
+			);
+			path = "Deposit Money";
+			sourceTree = "<group>";
+		};
+		66351A8F27847C76001DD26C /* Withdraw Money */ = {
+			isa = PBXGroup;
+			children = (
+				6607B99B27830FC4003B5D16 /* WithdrawMoneyViewController.swift */,
+			);
+			path = "Withdraw Money";
+			sourceTree = "<group>";
+		};
 		6680ADC92781B6B200FB1E40 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				6680ADD52782087C00FB1E40 /* HomeViewController.swift */,
-				6607B999278305CA003B5D16 /* DepositMoneyViewController.swift */,
-				6607B99B27830FC4003B5D16 /* WithdrawMoneyViewController.swift */,
+				66351A8E27847C69001DD26C /* Deposit Money */,
+				66351A8F27847C76001DD26C /* Withdraw Money */,
 				66C4A1A627844900003AC7AF /* Crypto Details */,
 				664CE0A1278368ED004A9EA0 /* ReferAndEarnViewController.swift */,
 			);
@@ -266,6 +285,7 @@
 				664CE0A427837246004A9EA0 /* PortfolioViewController.swift in Sources */,
 				6607B99A278305CA003B5D16 /* DepositMoneyViewController.swift in Sources */,
 				6607B9982782F1CA003B5D16 /* TotalWorthViewController.swift in Sources */,
+				66351A8D27847C47001DD26C /* DepositMethodsViewController.swift in Sources */,
 				6680ADCE2781B8E500FB1E40 /* LoginViewController.swift in Sources */,
 				664CE0A627838BE0004A9EA0 /* TabBarViewController.swift in Sources */,
 				66351A8B27845CFA001DD26C /* BuyOrSellCoinViewController.swift in Sources */,

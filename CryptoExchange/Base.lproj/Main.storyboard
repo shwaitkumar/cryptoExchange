@@ -1185,7 +1185,7 @@ Crypto Exchange</string>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6J7-yH-QVX">
                                                             <rect key="frame" x="1" y="1" width="324" height="42"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vY5-ti-rd5">
+                                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vY5-ti-rd5">
                                                                     <rect key="frame" x="12" y="2" width="300" height="38"/>
                                                                     <color key="textColor" name="yellowPop"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -1372,6 +1372,36 @@ Crypto Exchange</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yy-sZ-8e8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4665" y="-1353"/>
+        </scene>
+        <!--Deposit Methods View Controller-->
+        <scene sceneID="0bz-tm-1ax">
+            <objects>
+                <viewController storyboardIdentifier="DepositMethodsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yli-K3-ECq" customClass="DepositMethodsViewController" customModule="CryptoExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k0D-JW-LaO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lx7-rB-9BK"/>
+                        <color key="backgroundColor" name="backgroundPop"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ci-xl-1OY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5568" y="-1714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xh9-8Q-1iB">
+            <objects>
+                <viewController id="0Wr-7C-Eqy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gBR-PL-8nx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gAa-DF-so0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yw9-ft-cLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6490" y="-1714"/>
         </scene>
         <!--Total Worth View Controller-->
         <scene sceneID="5rw-q7-1PQ">
@@ -1929,7 +1959,7 @@ Crypto Exchange</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="369-4W-x6j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5591" y="-1353"/>
+            <point key="canvasLocation" x="7423" y="-1353"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="EzC-3R-odX">
@@ -3283,7 +3313,7 @@ different?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dP5-g2-8IK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6491" y="-1353"/>
+            <point key="canvasLocation" x="8323" y="-1353"/>
         </scene>
         <!--Buy Or Sell Coin View Controller-->
         <scene sceneID="axG-4e-LgJ">
@@ -3564,7 +3594,7 @@ different?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2as-nb-OCF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7389.8550724637689" y="-950.22321428571422"/>
+            <point key="canvasLocation" x="9223" y="-950"/>
         </scene>
         <!--Transaction View Controller-->
         <scene sceneID="tZq-5p-haw">
@@ -3601,16 +3631,16 @@ different?</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionsTableViewCell" id="bd3-On-Fb2" customClass="TransactionsTableViewCell" customModule="CryptoExchange" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="167.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="167"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bd3-On-Fb2" id="mRQ-5m-16J">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="167.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="167"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lG-Qi-C4q">
-                                                    <rect key="frame" x="44" y="12" width="326" height="143.5"/>
+                                                    <rect key="frame" x="44" y="12" width="326" height="143"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9NE-cM-Cya">
-                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="144"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="143"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xX8-7r-l37">
@@ -3756,7 +3786,7 @@ different?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Lx-tP-HLj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7389.8550724637689" y="-1714.2857142857142"/>
+            <point key="canvasLocation" x="9223" y="-1714"/>
         </scene>
         <!--Refer And Earn View Controller-->
         <scene sceneID="F5Z-1k-Rv8">
@@ -4005,7 +4035,7 @@ different?</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JoW-Fu-8jU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8270" y="-1353"/>
+            <point key="canvasLocation" x="10100" y="-1353"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
