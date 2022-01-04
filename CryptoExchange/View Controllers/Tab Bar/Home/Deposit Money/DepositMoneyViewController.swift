@@ -30,6 +30,8 @@ class DepositMoneyViewController : BaseUIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+//        btntag = 0
+//        tblDepositMoney.reloadData()
     }
     
     @IBAction func btnDeposit(_ sender: UIButton) {

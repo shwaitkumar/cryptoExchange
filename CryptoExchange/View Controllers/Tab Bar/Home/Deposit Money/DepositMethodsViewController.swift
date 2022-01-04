@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DepositMethodsViewController : BaseUIViewController {
+class DepositMethodsViewController : UIViewController {
     
     @IBOutlet weak var tblDepositMethods: UITableView!
     
@@ -52,6 +52,37 @@ extension DepositMethodsViewController : UITableViewDelegate, UITableViewDataSou
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.row == 0 {
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "UPIViewController") as! UPIViewController
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        else if indexPath.row == 1 {
+            
+            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            
+        }
+        else {
+            
+            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            
+        }
+        
+    }
+    
+    func showAlert(Message:String, Title: String){
+    
+        let alert = UIAlertController (title: Title, message: Message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:{ (alertOKAction) in }))
+        self.present(alert, animated: true, completion: nil)
+    
     }
     
 }

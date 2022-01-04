@@ -17,6 +17,7 @@
 		660A37372781B37D00CC6DD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 660A37352781B37D00CC6DD3 /* LaunchScreen.storyboard */; };
 		66351A8B27845CFA001DD26C /* BuyOrSellCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66351A8A27845CFA001DD26C /* BuyOrSellCoinViewController.swift */; };
 		66351A8D27847C47001DD26C /* DepositMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66351A8C27847C47001DD26C /* DepositMethodsViewController.swift */; };
+		66351A9127849AAC001DD26C /* UPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66351A9027849AAC001DD26C /* UPIViewController.swift */; };
 		664CE0A2278368ED004A9EA0 /* ReferAndEarnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CE0A1278368ED004A9EA0 /* ReferAndEarnViewController.swift */; };
 		664CE0A427837246004A9EA0 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CE0A327837246004A9EA0 /* PortfolioViewController.swift */; };
 		664CE0A627838BE0004A9EA0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CE0A527838BE0004A9EA0 /* TabBarViewController.swift */; };
@@ -44,6 +45,7 @@
 		660A37382781B37D00CC6DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66351A8A27845CFA001DD26C /* BuyOrSellCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyOrSellCoinViewController.swift; sourceTree = "<group>"; };
 		66351A8C27847C47001DD26C /* DepositMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositMethodsViewController.swift; sourceTree = "<group>"; };
+		66351A9027849AAC001DD26C /* UPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPIViewController.swift; sourceTree = "<group>"; };
 		664CE0A1278368ED004A9EA0 /* ReferAndEarnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferAndEarnViewController.swift; sourceTree = "<group>"; };
 		664CE0A327837246004A9EA0 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		664CE0A527838BE0004A9EA0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				6607B999278305CA003B5D16 /* DepositMoneyViewController.swift */,
 				66351A8C27847C47001DD26C /* DepositMethodsViewController.swift */,
+				66351A9027849AAC001DD26C /* UPIViewController.swift */,
 			);
 			path = "Deposit Money";
 			sourceTree = "<group>";
@@ -161,10 +164,10 @@
 			isa = PBXGroup;
 			children = (
 				6680ADD52782087C00FB1E40 /* HomeViewController.swift */,
+				664CE0A1278368ED004A9EA0 /* ReferAndEarnViewController.swift */,
 				66351A8E27847C69001DD26C /* Deposit Money */,
 				66351A8F27847C76001DD26C /* Withdraw Money */,
 				66C4A1A627844900003AC7AF /* Crypto Details */,
-				664CE0A1278368ED004A9EA0 /* ReferAndEarnViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				660A372B2781B37B00CC6DD3 /* AppDelegate.swift in Sources */,
 				6601AD632783297F0015E396 /* CryptoDetailedViewController.swift in Sources */,
 				6680ADD62782087C00FB1E40 /* HomeViewController.swift in Sources */,
+				66351A9127849AAC001DD26C /* UPIViewController.swift in Sources */,
 				6680ADCB2781B6DD00FB1E40 /* BaseUIViewController.swift in Sources */,
 				66C4A1A827844918003AC7AF /* TransactionViewController.swift in Sources */,
 				664CE0A2278368ED004A9EA0 /* ReferAndEarnViewController.swift in Sources */,

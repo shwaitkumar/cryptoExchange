@@ -80,7 +80,7 @@ class ReferAndEarnViewController : BaseUIViewController {
     @IBAction func btnCopy(_ sender: UIButton) {
         
         UIPasteboard.general.string = lblReferralCode.text
-        showAlert(Message: "Referral Code Copied", Title: "Crypto Exchange")
+        showAlert(Message: "Referral code copied successfully", Title: "Crypto Exchange")
         
     }
     
