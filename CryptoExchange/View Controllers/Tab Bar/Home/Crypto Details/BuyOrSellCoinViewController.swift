@@ -21,6 +21,8 @@ class BuyOrSellCoinViewController : BaseUIViewController {
     @IBOutlet weak var btn100: UIButton!
     @IBOutlet weak var btnBuyOrSell: UIButton!
     
+    var buttonTag = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +35,24 @@ class BuyOrSellCoinViewController : BaseUIViewController {
         viewCoinPic.layer.cornerRadius = 28
         ivCoin.layer.cornerRadius = 27
         
-//        setViewShadow(view: viewCoinPic, shadowColor: "whitePop")
+        if buttonTag == 1 {
+            
+            lblTitle.text = "Sell Bitcoin"
+            lblTitle.textColor = UIColor(named: "redPop")
+            
+            btnBuyOrSell.setTitle("Sell", for: .normal)
+            btnBuyOrSell.backgroundColor = UIColor(named: "redPop")
+            
+        }
+        else {
+            
+            lblTitle.text = "Buy Bitcoin"
+            lblTitle.textColor = UIColor(named: "greenPop")
+            
+            btnBuyOrSell.setTitle("Buy", for: .normal)
+            btnBuyOrSell.backgroundColor = UIColor(named: "greenPop")
+            
+        }
         
     }
     

@@ -17,6 +17,8 @@ class CryptoDetailedViewController : BaseUIViewController {
     var aboutState = false
     var reasoningState = false
     
+    var buttonTag = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,7 @@ class CryptoDetailedViewController : BaseUIViewController {
         setButtonShadow(btn: btnSell, shadowColor: "whitePop")
         
         btnBuy.addTarget(self, action: #selector(btnBuyTapped(_:)), for: .touchUpInside)
+        btnSell.addTarget(self, action: #selector(btnSellTapped(_:)), for: .touchUpInside)
         
     }
     
@@ -39,8 +42,25 @@ class CryptoDetailedViewController : BaseUIViewController {
     
     @objc func btnBuyTapped(_ sender: UIButton){
         
-        performSegue(withIdentifier: "toBuyOrSellCoin", sender: nil)
+        buttonTag = 0
+        self.performSegue(withIdentifier: "toBuyOrSellCoin", sender: nil)
         
+    }
+    
+    @objc func btnSellTapped(_ sender: UIButton){
+        
+        buttonTag = 1
+        self.performSegue(withIdentifier: "toBuyOrSellCoin", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toBuyOrSellCoin" {
+        
+            let destinationVC = segue.destination as! BuyOrSellCoinViewController
+            destinationVC.buttonTag = self.buttonTag
+            
+        }
     }
     
 }
