@@ -28,7 +28,7 @@ class HomeViewController : BaseUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollView.contentInsetAdjustmentBehavior = .never
+//        viewPersonal.contentInsetAdjustmentBehavior = .never
         
         viewUserPicBorder.layer.cornerRadius = 28
         viewSendCrypto.layer.cornerRadius = 28

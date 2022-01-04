@@ -14,20 +14,15 @@ class PortfolioViewController : BaseUIViewController {
     
     @IBOutlet weak var ivUser: UIImageView!
     
-    @IBOutlet weak var vewPortfolioCard: UIVisualEffectView!
     @IBOutlet weak var tblPortfolio: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        viewPersonal.contentInsetAdjustmentBehavior = .never
-        
         viewUserPic.layer.cornerRadius = 28
         ivUser.layer.cornerRadius = 27
         
         setViewShadow(view: viewUserPic, shadowColor: "whitePop")
-        
-        vewPortfolioCard.layer.cornerRadius = 12
         
         self.tblPortfolio.delegate = self
         self.tblPortfolio.dataSource = self
@@ -59,9 +54,35 @@ extension PortfolioViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioTableViewCell", for: indexPath) as! PortfolioTableViewCell
+        if indexPath.row == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioFixedDetailsTableViewCell", for: indexPath) as! PortfolioFixedDetailsTableViewCell
+            
+            return cell
+            
+        }
+        else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioTableViewCell", for: indexPath) as! PortfolioTableViewCell
+            
+            return cell
+            
+        }
         
-        return cell
+    }
+    
+}
+
+class PortfolioFixedDetailsTableViewCell : UITableViewCell {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+        // Configure the view for the selected state
         
     }
     

@@ -59,8 +59,7 @@ class PinViewController : BaseUIViewController {
             
             if tfPin1.text == "0" && tfPin2.text == "0" && tfPin3.text == "0" && tfPin4.text == "0" {
                 
-                let vc = storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                navigationController?.pushViewController(vc, animated: true)
+                appDelegate.pushToHomeViewController()
                 
             }
             else {
