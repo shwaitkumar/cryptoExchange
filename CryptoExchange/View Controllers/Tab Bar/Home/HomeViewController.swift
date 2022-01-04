@@ -28,8 +28,6 @@ class HomeViewController : BaseUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        viewPersonal.contentInsetAdjustmentBehavior = .never
-        
         viewUserPicBorder.layer.cornerRadius = 28
         viewSendCrypto.layer.cornerRadius = 28
         viewReceiveCrypto.layer.cornerRadius = 28

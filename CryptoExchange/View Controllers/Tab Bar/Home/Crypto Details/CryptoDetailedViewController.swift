@@ -78,6 +78,9 @@ extension CryptoDetailedViewController : UITableViewDelegate, UITableViewDataSou
         cell.viewReason.tag = indexPath.row
         cell.viewReason.addGestureRecognizer(tapReason)
         
+        cell.btnTransactions.tag = indexPath.row
+        cell.btnTransactions.addTarget(self, action: #selector(btnTransactionsTapped(_:)), for: .touchUpInside)
+        
         return cell
         
     }
@@ -96,6 +99,12 @@ extension CryptoDetailedViewController : UITableViewDelegate, UITableViewDataSou
     
     @IBAction func viewReasonTapped(sender: UITapGestureRecognizer){
         expandReason()
+    }
+    
+    @objc func btnTransactionsTapped(_ sender: UIButton){
+        
+        performSegue(withIdentifier: "toTransactions", sender: nil)
+        
     }
     
     func expandAbout() {
