@@ -2138,7 +2138,7 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lsh-z9-D7O">
                                                             <rect key="frame" x="1" y="1" width="324" height="42"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-dZ-rFk">
+                                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-dZ-rFk">
                                                                     <rect key="frame" x="12" y="2" width="300" height="38"/>
                                                                     <color key="textColor" name="yellowPop"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -2406,6 +2406,7 @@
                                             <outlet property="btn25" destination="azl-uM-DBV" id="hS9-Be-M9K"/>
                                             <outlet property="btn50" destination="ExE-px-yhz" id="uGY-km-qZj"/>
                                             <outlet property="btn75" destination="qHJ-PM-p9j" id="4sS-wI-FpM"/>
+                                            <outlet property="tfWithdraw" destination="dUf-dZ-rFk" id="v8v-e1-5E2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -2421,6 +2422,9 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="baseForegroundColor" name="backgroundPop"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnWithdraw:" destination="cx8-9Y-Ew1" eventType="touchUpInside" id="Smy-ys-Mbo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="blW-74-9wK"/>
@@ -4114,16 +4118,16 @@ different?</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionsTableViewCell" id="bd3-On-Fb2" customClass="TransactionsTableViewCell" customModule="CryptoExchange" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="167.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="167"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bd3-On-Fb2" id="mRQ-5m-16J">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="167.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="167"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lG-Qi-C4q">
-                                                    <rect key="frame" x="44" y="12" width="326" height="143.5"/>
+                                                    <rect key="frame" x="44" y="12" width="326" height="143"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9NE-cM-Cya">
-                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="144"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="143"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xX8-7r-l37">
