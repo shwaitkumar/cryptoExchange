@@ -29,10 +29,18 @@ class CryptoDetailedViewController : BaseUIViewController {
         setButtonShadow(btn: btnBuy, shadowColor: "whitePop")
         setButtonShadow(btn: btnSell, shadowColor: "whitePop")
         
+        btnBuy.addTarget(self, action: #selector(btnBuyTapped(_:)), for: .touchUpInside)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+    }
+    
+    @objc func btnBuyTapped(_ sender: UIButton){
+        
+        performSegue(withIdentifier: "toBuyOrSellCoin", sender: nil)
+        
     }
     
 }
