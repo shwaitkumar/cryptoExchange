@@ -13,6 +13,9 @@ class DepositMoneyViewController : BaseUIViewController {
     
     @IBOutlet weak var tblDepositMoney: UITableView!
     
+    var tfAmount = 0.0
+    var btntag = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,8 +47,93 @@ extension DepositMoneyViewController : UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DepositMoneyTableViewCell", for: indexPath) as! DepositMoneyTableViewCell
         
+        if btntag == 1 {
+            setDefault()
+            cell.btn100.backgroundColor = UIColor(named: "bluePop")
+            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+        }
+        else if btntag == 2 {
+            setDefault()
+            cell.btn500.backgroundColor = UIColor(named: "bluePop")
+            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+        }
+        else if btntag == 3 {
+            setDefault()
+            cell.btn2000.backgroundColor = UIColor(named: "bluePop")
+            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+        }
+        else if btntag == 4 {
+            setDefault()
+            cell.btn10000.backgroundColor = UIColor(named: "bluePop")
+            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+        }
+        else if btntag == 5 {
+            setDefault()
+            cell.btn50000.backgroundColor = UIColor(named: "bluePop")
+            cell.tfDeposit.text = "₹ " + String(format: "%.1f", tfAmount)
+        }
+        else {
+            setDefault()
+            cell.tfDeposit.text = ""
+        }
+        
+        func setDefault() {
+            
+            cell.btn100.backgroundColor = UIColor(named: "tealPop")
+            cell.btn500.backgroundColor = UIColor(named: "tealPop")
+            cell.btn2000.backgroundColor = UIColor(named: "tealPop")
+            cell.btn10000.backgroundColor = UIColor(named: "tealPop")
+            cell.btn50000.backgroundColor = UIColor(named: "tealPop")
+            
+        }
+        
+        cell.btn100.tag = indexPath.row
+        cell.btn100.addTarget(self, action: #selector(btnPlus100Tapped(_:)), for: .touchUpInside)
+        
+        cell.btn500.tag = indexPath.row
+        cell.btn500.addTarget(self, action: #selector(btnPlus500Tapped(_:)), for: .touchUpInside)
+        
+        cell.btn2000.tag = indexPath.row
+        cell.btn2000.addTarget(self, action: #selector(btnPlus2000Tapped(_:)), for: .touchUpInside)
+        
+        cell.btn10000.tag = indexPath.row
+        cell.btn10000.addTarget(self, action: #selector(btnPlus10000Tapped(_:)), for: .touchUpInside)
+        
+        cell.btn50000.tag = indexPath.row
+        cell.btn50000.addTarget(self, action: #selector(btnPlus50000Tapped(_:)), for: .touchUpInside)
+        
         return cell
         
+    }
+    
+    @objc func btnPlus100Tapped(_ sender: UIButton){
+        btntag = 1
+        tfAmount = 100
+        tblDepositMoney.reloadData()
+    }
+    
+    @objc func btnPlus500Tapped(_ sender: UIButton){
+        btntag = 2
+        tfAmount = 500
+        tblDepositMoney.reloadData()
+    }
+    
+    @objc func btnPlus2000Tapped(_ sender: UIButton){
+        btntag = 3
+        tfAmount = 2000
+        tblDepositMoney.reloadData()
+    }
+    
+    @objc func btnPlus10000Tapped(_ sender: UIButton){
+        btntag = 4
+        tfAmount = 10000
+        tblDepositMoney.reloadData()
+    }
+    
+    @objc func btnPlus50000Tapped(_ sender: UIButton){
+        btntag = 5
+        tfAmount = 50000
+        tblDepositMoney.reloadData()
     }
     
 }
@@ -57,6 +145,8 @@ class DepositMoneyTableViewCell : UITableViewCell {
     @IBOutlet weak var btn2000: UIButton!
     @IBOutlet weak var btn10000: UIButton!
     @IBOutlet weak var btn50000: UIButton!
+    
+    @IBOutlet weak var tfDeposit: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -79,6 +169,8 @@ class DepositMoneyTableViewCell : UITableViewCell {
         setButtonShadow(btn: btn10000, shadowColor: "whitePop")
         setButtonShadow(btn: btn50000, shadowColor: "whitePop")
         
+        [tfDeposit].forEach({ $0.addTarget(self, action: #selector(clearTf), for: .editingChanged)})
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -95,6 +187,31 @@ class DepositMoneyTableViewCell : UITableViewCell {
         btn.layer.shadowOpacity = 0.20
         btn.layer.shadowColor = UIColor(named: shadowColor)?.cgColor
 
+    }
+    
+}
+
+extension DepositMoneyTableViewCell : UITextFieldDelegate {
+    
+    @objc func clearTf(sender: UITextField) {
+
+        guard
+            let tfAmountTextValue = tfDeposit.text, !tfAmountTextValue.isEmpty
+        else {
+            setDefault()
+            return
+
+        }
+        setDefault()
+
+    }
+    
+    func setDefault() {
+        btn100.backgroundColor = UIColor(named: "tealPop")
+        btn500.backgroundColor = UIColor(named: "tealPop")
+        btn2000.backgroundColor = UIColor(named: "tealPop")
+        btn10000.backgroundColor = UIColor(named: "tealPop")
+        btn50000.backgroundColor = UIColor(named: "tealPop")
     }
     
 }

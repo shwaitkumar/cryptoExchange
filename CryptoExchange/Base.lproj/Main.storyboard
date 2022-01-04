@@ -723,7 +723,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="tealPop"/>
+                                                        <color key="backgroundColor" name="bluePop"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="56" id="E0M-RI-0Jr"/>
                                                             <constraint firstItem="ZN3-rW-uCg" firstAttribute="centerX" secondItem="8aP-7F-KaG" secondAttribute="centerX" id="Rt5-BL-l9J"/>
@@ -747,7 +747,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="tealPop"/>
+                                                        <color key="backgroundColor" name="bluePop"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="56" id="e9O-C9-DUG"/>
                                                             <constraint firstItem="fGN-Vg-5rS" firstAttribute="centerX" secondItem="IPt-NF-80L" secondAttribute="centerX" id="jpF-gT-axh"/>
@@ -771,7 +771,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" name="tealPop"/>
+                                                        <color key="backgroundColor" name="bluePop"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="56" id="29Q-UJ-QzW"/>
                                                             <constraint firstAttribute="height" constant="56" id="9y6-Hh-PKI"/>
@@ -1189,7 +1189,7 @@ Crypto Exchange</string>
                                                                     <rect key="frame" x="12" y="2" width="300" height="38"/>
                                                                     <color key="textColor" name="yellowPop"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                    <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                                                             <color key="value" red="1" green="0.98400002720000002" blue="0.21999999880000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1346,6 +1346,7 @@ Crypto Exchange</string>
                                             <outlet property="btn2000" destination="nZe-6c-kSK" id="lsL-Mw-aX3"/>
                                             <outlet property="btn500" destination="KVt-CW-9Xs" id="O9s-MY-Maa"/>
                                             <outlet property="btn50000" destination="RhB-7M-fqd" id="6Mb-nR-oz2"/>
+                                            <outlet property="tfDeposit" destination="vY5-ti-rd5" id="OIj-hH-ctw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -3295,7 +3296,7 @@ different?</string>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3h-hK-2GP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="168.5"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZSH-Q6-Vwo">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="168.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8LH-Cj-q1i">
@@ -3741,11 +3742,11 @@ different?</string>
                             <constraint firstItem="Rdj-k5-erz" firstAttribute="centerX" secondItem="LWb-YP-olD" secondAttribute="centerX" id="7vn-hK-lP3"/>
                             <constraint firstAttribute="bottom" secondItem="mAR-5O-RFc" secondAttribute="bottom" constant="44" id="9bt-66-aPF"/>
                             <constraint firstItem="F7T-bG-U5t" firstAttribute="trailing" secondItem="mAR-5O-RFc" secondAttribute="trailing" id="Qdn-1b-gg5"/>
-                            <constraint firstItem="CUb-jF-E0a" firstAttribute="top" secondItem="LWb-YP-olD" secondAttribute="top" constant="44" id="Uda-XG-UYX"/>
                             <constraint firstItem="CUb-jF-E0a" firstAttribute="leading" secondItem="F7T-bG-U5t" secondAttribute="leading" constant="44" id="fsz-9J-ldf"/>
                             <constraint firstItem="mAR-5O-RFc" firstAttribute="top" secondItem="CUb-jF-E0a" secondAttribute="bottom" constant="44" id="hpt-Hb-TiE"/>
                             <constraint firstItem="F7T-bG-U5t" firstAttribute="trailing" secondItem="CUb-jF-E0a" secondAttribute="trailing" constant="44" id="kap-Sp-MqH"/>
                             <constraint firstItem="Rdj-k5-erz" firstAttribute="top" secondItem="F7T-bG-U5t" secondAttribute="top" constant="12" id="seA-Ei-mW1"/>
+                            <constraint firstItem="CUb-jF-E0a" firstAttribute="top" secondItem="LWb-YP-olD" secondAttribute="top" constant="44" id="xeu-f9-NpL"/>
                             <constraint firstItem="mAR-5O-RFc" firstAttribute="leading" secondItem="F7T-bG-U5t" secondAttribute="leading" id="yP3-w1-Xpf"/>
                         </constraints>
                     </view>

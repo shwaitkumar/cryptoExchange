@@ -19,6 +19,13 @@ class TransactionViewController : BaseUIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationItem.title = "Transactions"
+        
+    }
+    
 }
 
 extension TransactionViewController : UITableViewDelegate, UITableViewDataSource {
