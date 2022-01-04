@@ -70,22 +70,42 @@ extension CryptoDetailedViewController : UITableViewDelegate, UITableViewDataSou
         cell.btnReason.tag = indexPath.row
         cell.btnReason.addTarget(self, action: #selector(btnReasoningExpandTapped(_:)), for: .touchUpInside)
         
+        let tapAbout = UITapGestureRecognizer(target: self, action:  #selector(self.viewAboutTapped))
+        cell.viewAbout.tag = indexPath.row
+        cell.viewAbout.addGestureRecognizer(tapAbout)
+        
+        let tapReason = UITapGestureRecognizer(target: self, action:  #selector(self.viewReasonTapped))
+        cell.viewReason.tag = indexPath.row
+        cell.viewReason.addGestureRecognizer(tapReason)
+        
         return cell
         
     }
       
     @objc func btnAboutExpandTapped(_ sender: UIButton){
-        
-        aboutState = !aboutState
-        tblCryptoDetail.reloadData()
-    
+        expandAbout()
     }
     
     @objc func btnReasoningExpandTapped(_ sender: UIButton){
-        
+        expandReason()
+    }
+    
+    @IBAction func viewAboutTapped(sender: UITapGestureRecognizer){
+        expandAbout()
+    }
+    
+    @IBAction func viewReasonTapped(sender: UITapGestureRecognizer){
+        expandReason()
+    }
+    
+    func expandAbout() {
+        aboutState = !aboutState
+        tblCryptoDetail.reloadData()
+    }
+    
+    func expandReason() {
         reasoningState = !reasoningState
         tblCryptoDetail.reloadData()
-    
     }
     
 }

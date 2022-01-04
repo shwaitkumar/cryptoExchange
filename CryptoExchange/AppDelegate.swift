@@ -51,7 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func pushToPortfolioViewController() -> Void {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PortfolioViewController") as! PortfolioViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        vc.selectedIndex = 1
+        let nc = UINavigationController.init(rootViewController: vc)
+        self.window?.rootViewController = nc
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func pushToMarketViewController() -> Void {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        vc.selectedIndex = 2
         let nc = UINavigationController.init(rootViewController: vc)
         self.window?.rootViewController = nc
         self.window?.makeKeyAndVisible()
