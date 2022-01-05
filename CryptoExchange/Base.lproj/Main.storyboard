@@ -3591,7 +3591,7 @@
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPu-f2-9Fd">
                                                                                                 <rect key="frame" x="297.5" y="1.5" width="6.5" height="17"/>
                                                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                                                <color key="textColor" name="tealPop"/>
+                                                                                                <color key="textColor" name="whitePop"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
@@ -3616,7 +3616,7 @@
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="78789778771273" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0u-yx-L6U">
                                                                                                 <rect key="frame" x="191" y="1.5" width="113" height="17"/>
                                                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                                                <color key="textColor" name="tealPop"/>
+                                                                                                <color key="textColor" name="whitePop"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
@@ -3641,7 +3641,7 @@
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1245577" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccR-YC-5YZ">
                                                                                                 <rect key="frame" x="247.5" y="1.5" width="56.5" height="17"/>
                                                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                                                <color key="textColor" name="tealPop"/>
+                                                                                                <color key="textColor" name="whitePop"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
@@ -3666,7 +3666,7 @@
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1245577" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spC-Fa-7P5">
                                                                                                 <rect key="frame" x="247.5" y="1.5" width="56.5" height="17"/>
                                                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                                                <color key="textColor" name="tealPop"/>
+                                                                                                <color key="textColor" name="whitePop"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                         </subviews>
@@ -4050,6 +4050,9 @@
                                         <state key="normal" title="25%">
                                             <color key="titleColor" name="backgroundPop"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn25:" destination="pcp-tA-7T8" eventType="touchUpInside" id="3uA-ey-Ner"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YyZ-1s-ev8">
                                         <rect key="frame" x="84.5" y="0.0" width="72.5" height="32"/>
@@ -4062,6 +4065,9 @@
                                         <state key="normal" title="50%">
                                             <color key="titleColor" name="backgroundPop"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn50:" destination="pcp-tA-7T8" eventType="touchUpInside" id="KS7-eN-vzR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTl-E8-sOO">
                                         <rect key="frame" x="169" y="0.0" width="72.5" height="32"/>
@@ -4074,6 +4080,9 @@
                                         <state key="normal" title="75%">
                                             <color key="titleColor" name="backgroundPop"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn75:" destination="pcp-tA-7T8" eventType="touchUpInside" id="fug-8b-55n"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2M-yi-Dzi">
                                         <rect key="frame" x="253.5" y="0.0" width="72.5" height="32"/>
@@ -4086,6 +4095,9 @@
                                         <state key="normal" title="100%">
                                             <color key="titleColor" name="backgroundPop"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btn100:" destination="pcp-tA-7T8" eventType="touchUpInside" id="Z8x-lJ-PzW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -4100,6 +4112,9 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="baseForegroundColor" name="backgroundPop"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnBuyOrSell:" destination="pcp-tA-7T8" eventType="touchUpInside" id="p5E-Qb-Rfq"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Mj-GS-6W8">
                                 <rect key="frame" x="177" y="10.5" width="60" height="6"/>
@@ -4151,6 +4166,10 @@
                         <outlet property="lblTitle" destination="gGE-eJ-J9Z" id="i9i-9Q-1YU"/>
                         <outlet property="lblWalletBalanceOrCoinAmount" destination="fzL-pz-3QH" id="xnp-WE-MDB"/>
                         <outlet property="lblWalletOrCoinAmountTitle" destination="QWc-Ql-eBh" id="x3m-VY-Pdq"/>
+                        <outlet property="tfAmount" destination="jXw-sJ-hUI" id="BDr-6m-HUg"/>
+                        <outlet property="tfCoinAmount" destination="8Us-kP-QRD" id="gUv-Kh-2DE"/>
+                        <outlet property="viewAmount" destination="hbn-zm-Ebh" id="3Md-Bo-BKP"/>
+                        <outlet property="viewCoinAmount" destination="L0g-ZO-HYD" id="yeM-zl-28V"/>
                         <outlet property="viewCoinPic" destination="8LH-Cj-q1i" id="xj5-WF-GNv"/>
                     </connections>
                 </viewController>
@@ -4193,16 +4212,16 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionsTableViewCell" id="bd3-On-Fb2" customClass="TransactionsTableViewCell" customModule="CryptoExchange" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="167.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="167"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bd3-On-Fb2" id="mRQ-5m-16J">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="167.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="167"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lG-Qi-C4q">
-                                                    <rect key="frame" x="44" y="12" width="326" height="143.5"/>
+                                                    <rect key="frame" x="44" y="12" width="326" height="143"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9NE-cM-Cya">
-                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="143.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="143"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xX8-7r-l37">
