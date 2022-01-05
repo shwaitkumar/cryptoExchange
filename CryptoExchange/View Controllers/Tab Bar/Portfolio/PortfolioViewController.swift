@@ -92,9 +92,20 @@ extension PortfolioViewController : UITableViewDelegate, UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioTableViewCell", for: indexPath) as! PortfolioTableViewCell
             
+            let tapCoinCardCell = UITapGestureRecognizer(target: self, action:  #selector(self.coinCardTapped))
+            cell.viewCard.tag = indexPath.row
+            cell.viewCard.addGestureRecognizer(tapCoinCardCell)
+            
             return cell
             
         }
+        
+    }
+    
+    @IBAction func coinCardTapped(sender: UITapGestureRecognizer) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CryptoDetailedViewController") as! CryptoDetailedViewController
+        navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -116,6 +127,8 @@ class PortfolioFixedDetailsTableViewCell : UITableViewCell {
 }
 
 class PortfolioTableViewCell : UITableViewCell {
+    
+    @IBOutlet weak var viewCard: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

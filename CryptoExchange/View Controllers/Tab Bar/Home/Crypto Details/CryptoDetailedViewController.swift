@@ -22,6 +22,8 @@ class CryptoDetailedViewController : BaseUIViewController {
     var coinCurrentPrice = 0.0
     var coinAmount = 0.0
     
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,18 +36,31 @@ class CryptoDetailedViewController : BaseUIViewController {
         btnBuy.addTarget(self, action: #selector(btnBuyTapped(_:)), for: .touchUpInside)
         btnSell.addTarget(self, action: #selector(btnSellTapped(_:)), for: .touchUpInside)
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        navigationController?.navigationBar.isHidden = false
-        
         self.tblCryptoDetail.delegate = self
         self.tblCryptoDetail.dataSource = self
         
         coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
         coinAmount = Double(BaseUIViewController.getUserDefault(key: "amount"))!
         
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tblCryptoDetail.addSubview(refreshControl)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.navigationBar.isHidden = false
+        
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        
+       // Code to refresh table view
+        coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
+        coinAmount = Double(BaseUIViewController.getUserDefault(key: "amount"))!
+        
+        refreshControl.endRefreshing()
+        tblCryptoDetail.reloadData()
     }
     
     @objc func btnBuyTapped(_ sender: UIButton){

@@ -10,9 +10,6 @@ import UIKit
 class HomeViewController : BaseUIViewController {
     
     @IBOutlet weak var viewUserPicBorder: UIView!
-    @IBOutlet weak var viewSendCrypto: UIView!
-    @IBOutlet weak var viewReceiveCrypto: UIView!
-    @IBOutlet weak var viewConvertCrypto: UIView!
     @IBOutlet weak var viewDepositMoney: UIView!
     @IBOutlet weak var viewWithdrawMoney: UIView!
     @IBOutlet weak var viewReferAndEarn: UIView!
@@ -26,15 +23,16 @@ class HomeViewController : BaseUIViewController {
     
     @IBOutlet weak var lblWalletBalance: UILabel!
     
+    @IBOutlet weak var btnSend: UIButton!
+    @IBOutlet weak var btnReceive: UIButton!
+    @IBOutlet weak var btnConvert: UIButton!
+    
     var coinCurrentPrice = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewUserPicBorder.layer.cornerRadius = 28
-        viewSendCrypto.layer.cornerRadius = 8
-        viewReceiveCrypto.layer.cornerRadius = 8
-        viewConvertCrypto.layer.cornerRadius = 8
         ivUserPic.layer.cornerRadius = 27
         
         setViewShadow(view: viewUserPicBorder, shadowColor: "whitePop")
@@ -50,6 +48,10 @@ class HomeViewController : BaseUIViewController {
         viewReferAndEarn.layer.cornerRadius = 12
         viewDepositMoney.layer.cornerRadius = 8
         viewWithdrawMoney.layer.cornerRadius = 8
+        
+        btnSend.layer.cornerRadius = 8
+        btnReceive.layer.cornerRadius = 8
+        btnConvert.layer.cornerRadius = 8
         
         let tapPersonalView = UITapGestureRecognizer(target: self, action:  #selector(self.viewPersonalTapped))
         viewPersonal.addGestureRecognizer(tapPersonalView)
@@ -108,6 +110,18 @@ class HomeViewController : BaseUIViewController {
         
         ivGift.image = UIImage(named: "gift\(randomNumber)")
         
+    }
+    
+    @IBAction func btnSend(_ sender: UIButton) {
+        showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+    }
+    
+    @IBAction func btnReceive(_ sender: UIButton) {
+        showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+    }
+    
+    @IBAction func btnConvert(_ sender: UIButton) {
+        showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
     }
     
     func getUserDetails() {

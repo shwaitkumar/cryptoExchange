@@ -12,6 +12,7 @@ class ReferAndEarnViewController : BaseUIViewController {
     @IBOutlet weak var viewUserPic: UIView!
     
     @IBOutlet weak var ivUser: UIImageView!
+    @IBOutlet weak var ivGift: UIImageView!
     
     @IBOutlet weak var btnShare: UIButton!
     @IBOutlet weak var btnInviteViaWhatsapp: UIButton!
@@ -34,12 +35,15 @@ class ReferAndEarnViewController : BaseUIViewController {
         btnInviteViaWhatsapp.layer.cornerRadius = 8
         btnInviteViaContacts.layer.cornerRadius = 8
         
-        viewUserPic.layer.cornerRadius = 70
-        ivUser.layer.cornerRadius = 69
+        viewUserPic.layer.cornerRadius = 50
+        ivUser.layer.cornerRadius = 49
         
         referralCode = BaseUIViewController.getUserDefault(key: "referralCode")
         
         lblReferralCode.text = referralCode
+        
+        let randomGeneratedNumber = Int.random(in: 1..<6)
+        setGiftImage(randomNumber: randomGeneratedNumber)
         
     }
     
@@ -84,6 +88,12 @@ class ReferAndEarnViewController : BaseUIViewController {
         
         UIPasteboard.general.string = lblReferralCode.text
         showAlert(Message: "Referral code copied successfully", Title: "Crypto Exchange")
+        
+    }
+    
+    func setGiftImage(randomNumber : Int) {
+        
+        ivGift.image = UIImage(named: "gift\(randomNumber)")
         
     }
     

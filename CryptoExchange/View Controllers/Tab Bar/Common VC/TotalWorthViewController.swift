@@ -20,8 +20,8 @@ class TotalWorthViewController : BaseUIViewController {
         
         setViewShadow(view: viewUserPic, shadowColor: "whitePop")
         
-        viewUserPic.layer.cornerRadius = 70
-        ivUser.layer.cornerRadius = 69
+        viewUserPic.layer.cornerRadius = 50
+        ivUser.layer.cornerRadius = 49
         
         lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         
