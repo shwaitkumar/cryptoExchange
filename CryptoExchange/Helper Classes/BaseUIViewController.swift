@@ -97,6 +97,24 @@ class BaseUIViewController: UIViewController {
         view.layer.shadowColor = UIColor(named: shadowColor)?.cgColor
 
     }
+    
+    class func setUserDefault(value: String,key : String){
+        UserDefaults.standard.setValue(value, forKey: key)
+        UserDefaults.standard.synchronize()
+    }
+    
+    class func getUserDefault(key: String) -> String{
+        if let result = UserDefaults.standard.value(forKey: key) {
+            return result as! String
+        }else{
+            return ""
+        }
+    }
+    
+    class func randomString(length: Int) -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<length).map{ _ in letters.randomElement()! })
+    }
   
 }
 

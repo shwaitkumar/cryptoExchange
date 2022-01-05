@@ -19,6 +19,7 @@ class ReferAndEarnViewController : BaseUIViewController {
     @IBOutlet weak var btnCopy: UIButton!
     
     @IBOutlet weak var lblReferralCode: UILabel!
+    @IBOutlet weak var lblWalletBalance: UILabel!
     
     var referralCode = ""
     
@@ -36,7 +37,9 @@ class ReferAndEarnViewController : BaseUIViewController {
         viewUserPic.layer.cornerRadius = 70
         ivUser.layer.cornerRadius = 69
         
-        referralCode = lblReferralCode.text!
+        referralCode = BaseUIViewController.getUserDefault(key: "referralCode")
+        
+        lblReferralCode.text = referralCode
         
     }
     

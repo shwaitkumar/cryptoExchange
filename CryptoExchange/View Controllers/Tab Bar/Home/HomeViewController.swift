@@ -22,22 +22,19 @@ class HomeViewController : BaseUIViewController {
     @IBOutlet weak var cvPopularCoins: UICollectionView!
     
     @IBOutlet weak var ivUserPic: UIImageView!
+    @IBOutlet weak var ivGift: UIImageView!
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    
+    @IBOutlet weak var lblWalletBalance: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewUserPicBorder.layer.cornerRadius = 28
-        viewSendCrypto.layer.cornerRadius = 28
-        viewReceiveCrypto.layer.cornerRadius = 28
-        viewConvertCrypto.layer.cornerRadius = 28
+        viewSendCrypto.layer.cornerRadius = 8
+        viewReceiveCrypto.layer.cornerRadius = 8
+        viewConvertCrypto.layer.cornerRadius = 8
         ivUserPic.layer.cornerRadius = 27
         
         setViewShadow(view: viewUserPicBorder, shadowColor: "whitePop")
-        setViewShadow(view: viewSendCrypto, shadowColor: "whitePop")
-        setViewShadow(view: viewReceiveCrypto, shadowColor: "whitePop")
-        setViewShadow(view: viewConvertCrypto, shadowColor: "whitePop")
         setViewShadow(view: viewDepositMoney, shadowColor: "whitePop")
         setViewShadow(view: viewWithdrawMoney, shadowColor: "whitePop")
         setViewShadow(view: viewReferAndEarn, shadowColor: "whitePop")
@@ -63,11 +60,18 @@ class HomeViewController : BaseUIViewController {
         let tapReferAndEarn = UITapGestureRecognizer(target: self, action:  #selector(self.viewReferAndEarnTapped))
         viewReferAndEarn.addGestureRecognizer(tapReferAndEarn)
         
+        let randomGeneratedNumber = Int.random(in: 1..<6)
+        setGiftImage(randomNumber: randomGeneratedNumber)
+        
+        getUserDetails()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         navigationController?.navigationBar.isHidden = true
+        
+        getUserDetails()
         
     }
     
@@ -95,6 +99,27 @@ class HomeViewController : BaseUIViewController {
 
        performSegue(withIdentifier: "toReferAndEarn", sender: nil)
 
+    }
+    
+    func setGiftImage(randomNumber : Int) {
+        
+        ivGift.image = UIImage(named: "gift\(randomNumber)")
+        
+    }
+    
+    func getUserDetails() {
+        
+        if BaseUIViewController.getUserDefault(key: "amount") == "" {
+            BaseUIViewController.setUserDefault(value: "100", key: "amount")
+        }
+        else if BaseUIViewController.getUserDefault(key: "walletBalance") == "" {
+            BaseUIViewController.setUserDefault(value: "999999", key: "walletBalance")
+            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+        }
+        else {
+            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+        }
+        
     }
     
 }

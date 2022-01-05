@@ -44,6 +44,9 @@ class LoginWithEmailViewController: BaseUIViewController {
         
         if tfEmail.text == "abc@xyz.com" && tfPassword.text == "123456"
         {
+            BaseUIViewController.setUserDefault(value: "13", key: "userId")
+            let randomGeneratedReferralCode = BaseUIViewController.randomString(length: 8)
+            BaseUIViewController.setUserDefault(value: randomGeneratedReferralCode, key: "referralCode")
             appDelegate.pushToPinViewController()
         }
         else {

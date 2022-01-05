@@ -13,7 +13,7 @@ class WithdrawMoneyViewController : BaseUIViewController {
     
     @IBOutlet weak var btnWithdraw: UIButton!
     
-    var wallerBalance = 25626.0
+    var wallerBalance = 0.0
     var btntag = 0
     var amountCalculated = 0.0
     
@@ -31,6 +31,7 @@ class WithdrawMoneyViewController : BaseUIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+        wallerBalance = Double(BaseUIViewController.getUserDefault(key: "walletBalance"))!
     }
     
     @IBAction func btnWithdraw(_ sender: UIButton) {
@@ -50,8 +51,11 @@ class WithdrawMoneyViewController : BaseUIViewController {
             amountInDouble = 0.0
         }
         
-        if amountInDouble! < wallerBalance && amountInDouble! != 0.0 && amountInDouble! >= 100 {
+        if amountInDouble! <= wallerBalance && amountInDouble! != 0.0 && amountInDouble! >= 100 {
+            let newBalance = wallerBalance - amountInDouble!
+            BaseUIViewController.setUserDefault(value: "\(newBalance)", key: "walletBalance")
             showAlert(Message: "Amount will be transfered to your account within 4-5 working days", Title: "Crypto Exchange")
+            tblWithdrawMoney.reloadData()
         }
         else if amountInDouble! == 0.0 || amountInDouble! < 100 {
             showAlert(Message: "Amount to be withdrawn cannot be empty or less than ₹100", Title: "Crypto Exchange")
@@ -71,7 +75,10 @@ extension WithdrawMoneyViewController : UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "WithdrawMoneyTableViewCell", for: indexPath) as! WithdrawMoneyTableViewCell
+        
+        cell.lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         
         if btntag == 1 {
             setDefault()
@@ -120,6 +127,7 @@ extension WithdrawMoneyViewController : UITableViewDelegate, UITableViewDataSour
         cell.btn100.addTarget(self, action: #selector(btn100Tapped(_:)), for: .touchUpInside)
         
         return cell
+        
     }
     
     @objc func btn25Tapped(_ sender: UIButton){
@@ -156,6 +164,8 @@ class WithdrawMoneyTableViewCell : UITableViewCell {
     @IBOutlet weak var btn100: UIButton!
     
     @IBOutlet weak var tfWithdraw: UITextField!
+    
+    @IBOutlet weak var lblWalletBalance: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

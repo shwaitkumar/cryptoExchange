@@ -69,8 +69,13 @@ class UPITableViewCell : UITableViewCell {
     
     @IBOutlet weak var btnCopy: UIButton!
     
+    @IBOutlet weak var ivQRCode: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        setViewShadow(imageView: ivQRCode)
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -78,6 +83,15 @@ class UPITableViewCell : UITableViewCell {
         
         // Configure the view for the selected state
         
+    }
+    
+    func setViewShadow(imageView: UIImageView) {
+        
+        imageView.layer.shadowRadius = 10
+        imageView.layer.shadowOffset = .zero
+        imageView.layer.shadowOpacity = 0.75
+        imageView.layer.shadowColor = UIColor(named: "yellowPop")?.cgColor
+
     }
     
 }

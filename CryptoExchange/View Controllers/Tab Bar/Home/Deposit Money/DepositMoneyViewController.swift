@@ -13,6 +13,7 @@ class DepositMoneyViewController : BaseUIViewController {
     
     @IBOutlet weak var tblDepositMoney: UITableView!
     
+    var walletBalance = ""
     var tfAmount = 0.0
     var btntag = 0
     
@@ -30,8 +31,9 @@ class DepositMoneyViewController : BaseUIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
-//        btntag = 0
-//        tblDepositMoney.reloadData()
+        btntag = 0
+        walletBalance = BaseUIViewController.getUserDefault(key: "walletBalance")
+        tblDepositMoney.reloadData()
     }
     
     @IBAction func btnDeposit(_ sender: UIButton) {
@@ -75,6 +77,8 @@ extension DepositMoneyViewController : UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DepositMoneyTableViewCell", for: indexPath) as! DepositMoneyTableViewCell
+        
+        cell.lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         
         if btntag == 1 {
             setDefault()
@@ -176,6 +180,8 @@ class DepositMoneyTableViewCell : UITableViewCell {
     @IBOutlet weak var btn50000: UIButton!
     
     @IBOutlet weak var tfDeposit: UITextField!
+    
+    @IBOutlet weak var lblWalletBalance: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

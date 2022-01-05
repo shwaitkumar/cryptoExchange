@@ -16,6 +16,8 @@ class PortfolioViewController : BaseUIViewController {
     
     @IBOutlet weak var tblPortfolio: UITableView!
     
+    @IBOutlet weak var lblWalletBalance: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +38,8 @@ class PortfolioViewController : BaseUIViewController {
         
         navigationController?.navigationBar.isHidden = true
         
+       getUserDetails()
+        
     }
     
     @IBAction func viewPersonalTapped(sender: UITapGestureRecognizer){
@@ -43,6 +47,22 @@ class PortfolioViewController : BaseUIViewController {
        performSegue(withIdentifier: "toTotalWorth2", sender: nil)
 
     }
+    
+    func getUserDetails() {
+        
+        if BaseUIViewController.getUserDefault(key: "amount") == "" {
+            BaseUIViewController.setUserDefault(value: "100", key: "amount")
+        }
+        else if BaseUIViewController.getUserDefault(key: "walletBalance") == "" {
+            BaseUIViewController.setUserDefault(value: "999999", key: "walletBalance")
+            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+        }
+        else {
+            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+        }
+        
+    }
+
     
 }
 

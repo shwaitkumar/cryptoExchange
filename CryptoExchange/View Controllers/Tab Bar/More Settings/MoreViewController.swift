@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoreViewController : BaseUIViewController {
+class MoreViewController : UIViewController {
     
     @IBOutlet weak var viewPersonal: UIView!
     @IBOutlet weak var viewUserPic: UIView!
@@ -15,6 +15,10 @@ class MoreViewController : BaseUIViewController {
     @IBOutlet weak var ivUser: UIImageView!
     
     @IBOutlet weak var tblMore: UITableView!
+    
+    @IBOutlet weak var lblWalletBalance: UILabel!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,8 @@ class MoreViewController : BaseUIViewController {
         
         navigationController?.navigationBar.isHidden = true
         
+       getUserDetails()
+        
     }
     
     @IBAction func viewPersonalTapped(sender: UITapGestureRecognizer){
@@ -43,6 +49,31 @@ class MoreViewController : BaseUIViewController {
        performSegue(withIdentifier: "toTotalWorth4", sender: nil)
 
     }
+    
+    func setViewShadow(view: UIView, shadowColor: String) {
+        
+        view.layer.shadowRadius = 8
+        view.layer.shadowOffset = .zero
+        view.layer.shadowOpacity = 0.20
+        view.layer.shadowColor = UIColor(named: shadowColor)?.cgColor
+
+    }
+    
+    func getUserDetails() {
+        
+        if BaseUIViewController.getUserDefault(key: "amount") == "" {
+            BaseUIViewController.setUserDefault(value: "100", key: "amount")
+        }
+        else if BaseUIViewController.getUserDefault(key: "walletBalance") == "" {
+            BaseUIViewController.setUserDefault(value: "999999", key: "walletBalance")
+            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+        }
+        else {
+            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+        }
+        
+    }
+
     
 }
 
@@ -83,6 +114,56 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
         
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.row == 0 {
+            
+            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            
+        }
+        else if indexPath.row == 1 {
+            
+            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            
+        }
+        else if indexPath.row == 2 {
+            
+            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            
+        }
+        else if indexPath.row == 3 {
+            
+            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            
+        }
+        else if indexPath.row == 4 {
+            
+            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            
+        }
+        else {
+            
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+            print(Array(UserDefaults.standard.dictionaryRepresentation().keys).count)
+            
+            appDelegate.pushToLoginViewController()
+            
+        }
+        
+    }
+    
+    func showAlert(Message:String, Title: String){
+    
+        let alert = UIAlertController (title: Title, message: Message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:{ (alertOKAction) in }))
+        self.present(alert, animated: true, completion: nil)
+    
     }
 
 }

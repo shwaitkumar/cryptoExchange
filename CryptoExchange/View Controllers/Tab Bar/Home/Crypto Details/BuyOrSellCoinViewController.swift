@@ -10,6 +10,8 @@ import UIKit
 class BuyOrSellCoinViewController : BaseUIViewController {
     
     @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblWalletOrCoinAmountTitle: UILabel!
+    @IBOutlet weak var lblWalletBalanceOrCoinAmount: UILabel!
     
     @IBOutlet weak var viewCoinPic: UIView!
     
@@ -39,6 +41,8 @@ class BuyOrSellCoinViewController : BaseUIViewController {
             
             lblTitle.text = "Sell Bitcoin"
             lblTitle.textColor = UIColor(named: "redPop")
+            lblWalletOrCoinAmountTitle.text = "Amount : "
+            lblWalletBalanceOrCoinAmount.text = BaseUIViewController.getUserDefault(key: "amount")
             
             btnBuyOrSell.setTitle("Sell", for: .normal)
             btnBuyOrSell.backgroundColor = UIColor(named: "redPop")
@@ -48,6 +52,8 @@ class BuyOrSellCoinViewController : BaseUIViewController {
             
             lblTitle.text = "Buy Bitcoin"
             lblTitle.textColor = UIColor(named: "greenPop")
+            lblWalletOrCoinAmountTitle.text = "Wallet Balance : "
+            lblWalletBalanceOrCoinAmount.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
             
             btnBuyOrSell.setTitle("Buy", for: .normal)
             btnBuyOrSell.backgroundColor = UIColor(named: "greenPop")

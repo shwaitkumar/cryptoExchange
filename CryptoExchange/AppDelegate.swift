@@ -21,9 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-//        self.pushToLoginViewController()
-        self.pushToHomeViewController()
-//        self.pushToPortfolioViewController()
+        if BaseUIViewController.getUserDefault(key: "userId") != "" {
+            self.pushToPinViewController()
+        }
+        else {
+            self.pushToLoginViewController()
+        }
         
         return true
     }

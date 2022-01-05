@@ -13,6 +13,8 @@ class TotalWorthViewController : BaseUIViewController {
     
     @IBOutlet weak var ivUser: UIImageView!
     
+    @IBOutlet weak var lblWalletBalance: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +22,8 @@ class TotalWorthViewController : BaseUIViewController {
         
         viewUserPic.layer.cornerRadius = 70
         ivUser.layer.cornerRadius = 69
+        
+        lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         
     }
     
