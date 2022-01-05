@@ -17,6 +17,13 @@ class WithdrawMoneyViewController : BaseUIViewController {
     var btntag = 0
     var amountCalculated = 0.0
     
+    //Bank Details
+    var accountName = ""
+    var bankName = ""
+    var accountNumber = ""
+    var ifscCode = ""
+    var accountType = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +39,7 @@ class WithdrawMoneyViewController : BaseUIViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
         wallerBalance = Double(BaseUIViewController.getUserDefault(key: "walletBalance"))!
+        getBankDetails()
     }
     
     @IBAction func btnWithdraw(_ sender: UIButton) {
@@ -66,6 +74,45 @@ class WithdrawMoneyViewController : BaseUIViewController {
         
     }
     
+    func getBankDetails() {
+        
+        if BaseUIViewController.getUserDefault(key: "userAccountName") != "" {
+            accountName = BaseUIViewController.getUserDefault(key: "userAccountName")
+        }
+        else {
+            accountName = ""
+        }
+        
+        if BaseUIViewController.getUserDefault(key: "userBankName") != "" {
+            bankName = BaseUIViewController.getUserDefault(key: "userBankName")
+        }
+        else {
+            bankName = ""
+        }
+        
+        if BaseUIViewController.getUserDefault(key: "userAccountNumber") != "" {
+            accountNumber = BaseUIViewController.getUserDefault(key: "userAccountNumber")
+        }
+        else {
+            accountNumber = ""
+        }
+        
+        if BaseUIViewController.getUserDefault(key: "userIFSCCode") != "" {
+            ifscCode = BaseUIViewController.getUserDefault(key: "userIFSCCode")
+        }
+        else {
+            ifscCode = ""
+        }
+        
+        if BaseUIViewController.getUserDefault(key: "userAccountType") != "" {
+            accountType = BaseUIViewController.getUserDefault(key: "userAccountType")
+        }
+        else {
+            accountType = ""
+        }
+        
+    }
+    
 }
 
 extension WithdrawMoneyViewController : UITableViewDelegate, UITableViewDataSource {
@@ -79,6 +126,11 @@ extension WithdrawMoneyViewController : UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "WithdrawMoneyTableViewCell", for: indexPath) as! WithdrawMoneyTableViewCell
         
         cell.lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+        cell.lblAccountName.text = accountName
+        cell.lblBankName.text = bankName
+        cell.lblAccountNumber.text = accountNumber
+        cell.lblIFSCCode.text = ifscCode
+        cell.lblAccountType.text = accountType
         
         if btntag == 1 {
             setDefault()
@@ -166,6 +218,11 @@ class WithdrawMoneyTableViewCell : UITableViewCell {
     @IBOutlet weak var tfWithdraw: UITextField!
     
     @IBOutlet weak var lblWalletBalance: UILabel!
+    @IBOutlet weak var lblAccountName: UILabel!
+    @IBOutlet weak var lblBankName: UILabel!
+    @IBOutlet weak var lblAccountNumber: UILabel!
+    @IBOutlet weak var lblIFSCCode: UILabel!
+    @IBOutlet weak var lblAccountType: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

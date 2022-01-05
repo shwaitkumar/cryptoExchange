@@ -87,7 +87,7 @@ class MoreViewController : UIViewController {
 extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,18 +99,22 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
             cell.lblTitle.text = "Account Settings"
         }
         else if indexPath.row == 1 {
-            cell.ivIcon.image = UIImage(systemName: "lock.fill")
-            cell.lblTitle.text = "Security"
+            cell.ivIcon.image = UIImage(systemName: "building.columns.fill")
+            cell.lblTitle.text = "Bank Details"
         }
         else if indexPath.row == 2 {
+            cell.ivIcon.image = UIImage(systemName: "lock.fill")
+            cell.lblTitle.text = "Password & Security"
+        }
+        else if indexPath.row == 3 {
             cell.ivIcon.image = UIImage(systemName: "clock.fill")
             cell.lblTitle.text = "History"
         }
-        else if indexPath.row == 3 {
+        else if indexPath.row == 4 {
             cell.ivIcon.image = UIImage(systemName: "questionmark.circle.fill")
             cell.lblTitle.text = "Help & Support"
         }
-        else if indexPath.row == 4 {
+        else if indexPath.row == 5 {
             cell.ivIcon.image = UIImage(systemName: "info.circle.fill")
             cell.lblTitle.text = "About"
         }
@@ -129,17 +133,20 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row == 0 {
             
-            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "AccountSettingsViewController") as! AccountSettingsViewController
+            navigationController?.pushViewController(vc, animated: true)
             
         }
         else if indexPath.row == 1 {
             
-            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "BankDetailsViewController") as! BankDetailsViewController
+            navigationController?.pushViewController(vc, animated: true)
             
         }
         else if indexPath.row == 2 {
             
-            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "SecurityViewController") as! SecurityViewController
+            navigationController?.pushViewController(vc, animated: true)
             
         }
         else if indexPath.row == 3 {
@@ -148,6 +155,12 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
             
         }
         else if indexPath.row == 4 {
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "HelpAndSupportViewController") as! HelpAndSupportViewController
+            navigationController?.pushViewController(vc, animated: true)
+            
+        }
+        else if indexPath.row == 5 {
             
             showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
             

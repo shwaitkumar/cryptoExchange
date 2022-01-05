@@ -22,6 +22,10 @@
 		664CE0A2278368ED004A9EA0 /* ReferAndEarnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CE0A1278368ED004A9EA0 /* ReferAndEarnViewController.swift */; };
 		664CE0A427837246004A9EA0 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CE0A327837246004A9EA0 /* PortfolioViewController.swift */; };
 		664CE0A627838BE0004A9EA0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664CE0A527838BE0004A9EA0 /* TabBarViewController.swift */; };
+		665129C02785FEDE00F63D26 /* HelpAndSupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665129BF2785FEDE00F63D26 /* HelpAndSupportViewController.swift */; };
+		665129C22786047F00F63D26 /* BankDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665129C12786047F00F63D26 /* BankDetailsViewController.swift */; };
+		666BD72C2785D8AB009BA65F /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BD72B2785D8AB009BA65F /* AccountSettingsViewController.swift */; };
+		666BD72E2785DEFA009BA65F /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666BD72D2785DEFA009BA65F /* SecurityViewController.swift */; };
 		6680ADCB2781B6DD00FB1E40 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADCA2781B6DD00FB1E40 /* BaseUIViewController.swift */; };
 		6680ADCE2781B8E500FB1E40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADCD2781B8E500FB1E40 /* LoginViewController.swift */; };
 		6680ADD02781DCAF00FB1E40 /* LoginWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6680ADCF2781DCAF00FB1E40 /* LoginWithEmailViewController.swift */; };
@@ -51,6 +55,10 @@
 		664CE0A1278368ED004A9EA0 /* ReferAndEarnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferAndEarnViewController.swift; sourceTree = "<group>"; };
 		664CE0A327837246004A9EA0 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		664CE0A527838BE0004A9EA0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		665129BF2785FEDE00F63D26 /* HelpAndSupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpAndSupportViewController.swift; sourceTree = "<group>"; };
+		665129C12786047F00F63D26 /* BankDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailsViewController.swift; sourceTree = "<group>"; };
+		666BD72B2785D8AB009BA65F /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		666BD72D2785DEFA009BA65F /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
 		6680ADCA2781B6DD00FB1E40 /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
 		6680ADCD2781B8E500FB1E40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6680ADCF2781DCAF00FB1E40 /* LoginWithEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithEmailViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +211,10 @@
 			isa = PBXGroup;
 			children = (
 				66C4A1A427843525003AC7AF /* MoreViewController.swift */,
+				666BD72B2785D8AB009BA65F /* AccountSettingsViewController.swift */,
+				665129C12786047F00F63D26 /* BankDetailsViewController.swift */,
+				666BD72D2785DEFA009BA65F /* SecurityViewController.swift */,
+				665129BF2785FEDE00F63D26 /* HelpAndSupportViewController.swift */,
 			);
 			path = "More Settings";
 			sourceTree = "<group>";
@@ -294,6 +306,7 @@
 				6607B9982782F1CA003B5D16 /* TotalWorthViewController.swift in Sources */,
 				66351A8D27847C47001DD26C /* DepositMethodsViewController.swift in Sources */,
 				6680ADCE2781B8E500FB1E40 /* LoginViewController.swift in Sources */,
+				666BD72E2785DEFA009BA65F /* SecurityViewController.swift in Sources */,
 				664CE0A627838BE0004A9EA0 /* TabBarViewController.swift in Sources */,
 				66351A8B27845CFA001DD26C /* BuyOrSellCoinViewController.swift in Sources */,
 				66C4A1A527843526003AC7AF /* MoreViewController.swift in Sources */,
@@ -303,7 +316,10 @@
 				6680ADD02781DCAF00FB1E40 /* LoginWithEmailViewController.swift in Sources */,
 				660A372B2781B37B00CC6DD3 /* AppDelegate.swift in Sources */,
 				6601AD632783297F0015E396 /* CryptoDetailedViewController.swift in Sources */,
+				666BD72C2785D8AB009BA65F /* AccountSettingsViewController.swift in Sources */,
+				665129C02785FEDE00F63D26 /* HelpAndSupportViewController.swift in Sources */,
 				6680ADD62782087C00FB1E40 /* HomeViewController.swift in Sources */,
+				665129C22786047F00F63D26 /* BankDetailsViewController.swift in Sources */,
 				66351A9127849AAC001DD26C /* UPIViewController.swift in Sources */,
 				6680ADCB2781B6DD00FB1E40 /* BaseUIViewController.swift in Sources */,
 				66C4A1A827844918003AC7AF /* TransactionViewController.swift in Sources */,
