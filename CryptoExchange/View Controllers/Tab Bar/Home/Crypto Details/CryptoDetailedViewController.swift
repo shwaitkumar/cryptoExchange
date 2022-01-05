@@ -19,11 +19,11 @@ class CryptoDetailedViewController : BaseUIViewController {
     
     var buttonTag = 0
     
+    var coinCurrentPrice = 0.0
+    var coinAmount = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tblCryptoDetail.delegate = self
-        self.tblCryptoDetail.dataSource = self
         
         btnBuy.layer.cornerRadius = 8
         btnSell.layer.cornerRadius = 8
@@ -38,6 +38,13 @@ class CryptoDetailedViewController : BaseUIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = false
+        
+        self.tblCryptoDetail.delegate = self
+        self.tblCryptoDetail.dataSource = self
+        
+        coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
+        coinAmount = Double(BaseUIViewController.getUserDefault(key: "amount"))!
+        
     }
     
     @objc func btnBuyTapped(_ sender: UIButton){
@@ -72,7 +79,14 @@ extension CryptoDetailedViewController : UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CryptDetailsTableViewCell", for: indexPath) as! CryptDetailsTableViewCell
+        
+        let price = String(format: "%.1f", coinCurrentPrice)
+        cell.lblCoinPrice.text = "₹\(price)"
+        
+        let amount = String(format: "%.5f", coinAmount)
+        cell.lblCoinAmount.text = amount
         
         if aboutState == false {
             cell.viewExpandableAbout.isHidden = true
@@ -150,14 +164,18 @@ extension CryptoDetailedViewController : UITableViewDelegate, UITableViewDataSou
 class CryptDetailsTableViewCell : UITableViewCell {
     
     @IBOutlet weak var viewHighestAndLowest: UIView!
-    @IBOutlet weak var viewAbout: UIView!
-    @IBOutlet weak var viewExpandableAbout: UIView!
-    @IBOutlet weak var viewReason: UIView!
-    @IBOutlet weak var viewExpandableReason: UIView!
+    
+    @IBOutlet weak var viewAbout: UIVisualEffectView!
+    @IBOutlet weak var viewExpandableAbout: UIVisualEffectView!
+    @IBOutlet weak var viewReason: UIVisualEffectView!
+    @IBOutlet weak var viewExpandableReason: UIVisualEffectView!
     
     @IBOutlet weak var btnTransactions: UIButton!
     @IBOutlet weak var btnAbout: UIButton!
     @IBOutlet weak var btnReason: UIButton!
+    
+    @IBOutlet weak var lblCoinPrice: UILabel!
+    @IBOutlet weak var lblCoinAmount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -169,10 +187,6 @@ class CryptDetailsTableViewCell : UITableViewCell {
         setButtonShadow(btn: btnTransactions, shadowColor: "whitePop")
         
         setViewShadow(view: viewHighestAndLowest, shadowColor: "whitePop")
-        setViewShadow(view: viewAbout, shadowColor: "whitePop")
-        setViewShadow(view: viewExpandableAbout, shadowColor: "whitePop")
-        setViewShadow(view: viewReason, shadowColor: "whitePop")
-        setViewShadow(view: viewExpandableReason, shadowColor: "whitePop")
         
     }
     

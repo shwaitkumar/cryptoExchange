@@ -12,6 +12,7 @@ class BuyOrSellCoinViewController : BaseUIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblWalletOrCoinAmountTitle: UILabel!
     @IBOutlet weak var lblWalletBalanceOrCoinAmount: UILabel!
+    @IBOutlet weak var lblCurrentPrice: UILabel!
     
     @IBOutlet weak var viewCoinPic: UIView!
     
@@ -24,6 +25,7 @@ class BuyOrSellCoinViewController : BaseUIViewController {
     @IBOutlet weak var btnBuyOrSell: UIButton!
     
     var buttonTag = 0
+    var currentPrice = 25
     
     override func viewDidLoad() {
         super.viewDidLoad()

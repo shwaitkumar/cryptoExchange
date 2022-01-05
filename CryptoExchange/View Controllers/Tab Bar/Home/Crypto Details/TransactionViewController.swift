@@ -11,18 +11,18 @@ class TransactionViewController : BaseUIViewController {
     
     @IBOutlet weak var tblTransactions: UITableView!
     
+    var coinCurrentPrice = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tblTransactions.delegate = self
-        self.tblTransactions.dataSource = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationItem.title = "Transactions"
+        self.tblTransactions.delegate = self
+        self.tblTransactions.dataSource = self
+        
+        coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
         
     }
     
@@ -38,6 +38,9 @@ extension TransactionViewController : UITableViewDelegate, UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionsTableViewCell", for: indexPath) as! TransactionsTableViewCell
         
+        let price = String(format: "%.1f", coinCurrentPrice)
+        cell.lblCoinPrice.text = "₹\(price)"
+        
         return cell
         
     }
@@ -45,6 +48,8 @@ extension TransactionViewController : UITableViewDelegate, UITableViewDataSource
 }
 
 class TransactionsTableViewCell : UITableViewCell {
+    
+    @IBOutlet weak var lblCoinPrice: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

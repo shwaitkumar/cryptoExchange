@@ -18,6 +18,8 @@ class MarketViewController : BaseUIViewController {
     
     @IBOutlet weak var lblWalletBalance: UILabel!
     
+    var coinCurrentPrice = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,8 +59,13 @@ class MarketViewController : BaseUIViewController {
             BaseUIViewController.setUserDefault(value: "999999", key: "walletBalance")
             lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         }
+        else if BaseUIViewController.getUserDefault(key: "coinPrice") == "" {
+            BaseUIViewController.setUserDefault(value: "4365671.79", key: "coinPrice")
+            coinCurrentPrice = 4365671.79
+        }
         else {
             lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+            coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
         }
         
     }

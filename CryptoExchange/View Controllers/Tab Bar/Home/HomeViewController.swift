@@ -25,6 +25,9 @@ class HomeViewController : BaseUIViewController {
     @IBOutlet weak var ivGift: UIImageView!
     
     @IBOutlet weak var lblWalletBalance: UILabel!
+    
+    var coinCurrentPrice = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -116,8 +119,17 @@ class HomeViewController : BaseUIViewController {
             BaseUIViewController.setUserDefault(value: "999999", key: "walletBalance")
             lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         }
+        else if BaseUIViewController.getUserDefault(key: "coinPrice") == "" {
+            BaseUIViewController.setUserDefault(value: "4365671.79", key: "coinPrice")
+            coinCurrentPrice = 4365671.79
+            cvWatchlist.reloadData()
+            cvPopularCoins.reloadData()
+        }
         else {
             lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+            coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
+            cvWatchlist.reloadData()
+            cvPopularCoins.reloadData()
         }
         
     }
@@ -125,6 +137,8 @@ class HomeViewController : BaseUIViewController {
 }
 
 class WatchListCollectionViewCell : UICollectionViewCell {
+    
+    @IBOutlet weak var lblCoinPrice: UILabel!
     
     @IBOutlet weak var viewCardWatchlist: UIView!
     
@@ -138,6 +152,8 @@ class WatchListCollectionViewCell : UICollectionViewCell {
 }
 
 class PopularCoinsCollectionViewCell : UICollectionViewCell {
+    
+    @IBOutlet weak var lblCoinPrice: UILabel!
     
     @IBOutlet weak var viewCardPopularCoins: UIView!
     
@@ -173,6 +189,9 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WatchListCollectionViewCell", for: indexPath) as! WatchListCollectionViewCell
             
+            let price = String(format: "%.1f", coinCurrentPrice)
+            cell.lblCoinPrice.text = "₹\(price)"
+            
             let tapCoinCardCell = UITapGestureRecognizer(target: self, action:  #selector(self.coinCardTapped))
             cell.viewCardWatchlist.tag = indexPath.row
             cell.viewCardWatchlist.addGestureRecognizer(tapCoinCardCell)
@@ -183,6 +202,9 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         else {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCoinsCollectionViewCell", for: indexPath) as! PopularCoinsCollectionViewCell
+            
+            let price = String(format: "%.1f", coinCurrentPrice)
+            cell.lblCoinPrice.text = "₹\(price)"
             
             let tapCoinCardCell = UITapGestureRecognizer(target: self, action:  #selector(self.coinCardTapped))
             cell.viewCardPopularCoins.tag = indexPath.row
