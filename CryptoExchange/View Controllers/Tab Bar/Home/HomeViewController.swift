@@ -22,6 +22,7 @@ class HomeViewController : BaseUIViewController {
     @IBOutlet weak var ivGift: UIImageView!
     
     @IBOutlet weak var lblWalletBalance: UILabel!
+    @IBOutlet weak var lblName: UILabel!
     
     @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var btnReceive: UIButton!
@@ -67,8 +68,6 @@ class HomeViewController : BaseUIViewController {
         
         let randomGeneratedNumber = Int.random(in: 1..<6)
         setGiftImage(randomNumber: randomGeneratedNumber)
-        
-        getUserDetails()
         
     }
     
@@ -126,24 +125,38 @@ class HomeViewController : BaseUIViewController {
     
     func getUserDetails() {
         
-        if BaseUIViewController.getUserDefault(key: "amount") == "" {
-            BaseUIViewController.setUserDefault(value: "100", key: "amount")
+        if BaseUIViewController.getUserDefault(key: "amount") != "" {
+            print("???")
         }
-        else if BaseUIViewController.getUserDefault(key: "walletBalance") == "" {
-            BaseUIViewController.setUserDefault(value: "999999", key: "walletBalance")
+        else {
+            BaseUIViewController.setUserDefault(value: "0.08237", key: "amount")
+        }
+        
+        if BaseUIViewController.getUserDefault(key: "walletBalance") != "" {
             lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         }
-        else if BaseUIViewController.getUserDefault(key: "coinPrice") == "" {
+        else {
+            BaseUIViewController.setUserDefault(value: "512021", key: "walletBalance")
+            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+        }
+        
+        if BaseUIViewController.getUserDefault(key: "coinPrice") != "" {
+            coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
+            cvWatchlist.reloadData()
+            cvPopularCoins.reloadData()
+        }
+        else {
             BaseUIViewController.setUserDefault(value: "4365671.79", key: "coinPrice")
             coinCurrentPrice = 4365671.79
             cvWatchlist.reloadData()
             cvPopularCoins.reloadData()
         }
+        
+        if BaseUIViewController.getUserDefault(key: "fullName") != "" {
+            lblName.text = "Hi" + " " + BaseUIViewController.getUserDefault(key: "fullName") + "!"
+        }
         else {
-            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
-            coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
-            cvWatchlist.reloadData()
-            cvPopularCoins.reloadData()
+            lblName.text = "Hi!"
         }
         
     }

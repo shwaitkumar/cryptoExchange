@@ -1081,6 +1081,7 @@
                         <outlet property="cvWatchlist" destination="4zu-Xo-lYl" id="pIz-Tn-y5C"/>
                         <outlet property="ivGift" destination="cJU-Pu-KfB" id="OhC-Qz-0qo"/>
                         <outlet property="ivUserPic" destination="EuN-7c-dDi" id="8rM-lJ-zhi"/>
+                        <outlet property="lblName" destination="jgw-hO-cQ2" id="smP-sy-XO5"/>
                         <outlet property="lblWalletBalance" destination="LNb-zB-AAV" id="SH5-hr-cgp"/>
                         <outlet property="viewDepositMoney" destination="o8I-TB-Rne" id="A66-ER-von"/>
                         <outlet property="viewPersonal" destination="1aM-8l-Utd" id="obs-2P-auc"/>
@@ -1339,7 +1340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2yy-sZ-8e8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4665" y="-1353"/>
+            <point key="canvasLocation" x="4703" y="-1353"/>
         </scene>
         <!--Deposit Methods View Controller-->
         <scene sceneID="0bz-tm-1ax">
@@ -1408,7 +1409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ci-xl-1OY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5566.666666666667" y="-1714.2857142857142"/>
+            <point key="canvasLocation" x="5614" y="-1714"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xh9-8Q-1iB">
@@ -1750,6 +1751,7 @@
                     <navigationItem key="navigationItem" id="Un4-Hr-ZvO"/>
                     <connections>
                         <outlet property="ivUser" destination="nwY-gM-MXv" id="G3e-5U-zAS"/>
+                        <outlet property="lblName" destination="Tki-gL-hCN" id="q9r-Wr-1Rh"/>
                         <outlet property="lblWalletBalance" destination="yft-eV-4eH" id="NXA-RL-VUm"/>
                         <outlet property="viewUserPic" destination="rqZ-FR-Fkb" id="w7Y-4l-4V3"/>
                     </connections>
@@ -2758,6 +2760,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="ivUser" destination="KNb-wF-ejF" id="egV-lQ-HMS"/>
+                        <outlet property="lblName" destination="OGY-dc-ig6" id="A98-nz-JYg"/>
                         <outlet property="lblWalletBalance" destination="X4t-Ia-Qwu" id="bx9-Vp-nSU"/>
                         <outlet property="tblPortfolio" destination="zjT-vL-cBu" id="7iK-Z1-5bL"/>
                         <outlet property="viewPersonal" destination="MEa-Jg-zty" id="efT-Jj-ZqR"/>
@@ -3014,6 +3017,7 @@
                     <tabBarItem key="tabBarItem" title="Market" image="chart.bar.xaxis" catalog="system" id="qCD-1E-f9E"/>
                     <connections>
                         <outlet property="ivUser" destination="uVX-7q-SJc" id="ryg-ij-HNO"/>
+                        <outlet property="lblName" destination="p2w-Sl-HFb" id="cAb-Fd-7CF"/>
                         <outlet property="lblWalletBalance" destination="TRK-hG-tbr" id="ftH-Rb-Aa7"/>
                         <outlet property="tblMarket" destination="8ir-w3-CBX" id="nJY-Wr-9hF"/>
                         <outlet property="viewPersonal" destination="dwz-7t-t8Y" id="Ehs-wX-SYl"/>
@@ -3151,6 +3155,7 @@
                     <tabBarItem key="tabBarItem" title="More" image="line.3.horizontal" catalog="system" id="Uws-0Q-9P8"/>
                     <connections>
                         <outlet property="ivUser" destination="3Dm-V6-8s7" id="Fn9-K1-8BP"/>
+                        <outlet property="lblName" destination="Xts-fl-meP" id="fCX-bK-4LD"/>
                         <outlet property="lblWalletBalance" destination="aOz-NY-SUb" id="Qza-sP-7Os"/>
                         <outlet property="tblMore" destination="EJS-EJ-F0V" id="4Co-kr-d5B"/>
                         <outlet property="viewPersonal" destination="B4w-PW-J2T" id="R7p-7j-Icz"/>
@@ -4639,6 +4644,7 @@
                         <outlet property="btnShare" destination="lbt-Az-pAO" id="e17-7X-cee"/>
                         <outlet property="ivGift" destination="zbX-KE-GId" id="grO-D9-9Gj"/>
                         <outlet property="ivUser" destination="2RZ-e9-737" id="Qg1-FH-Mxa"/>
+                        <outlet property="lblName" destination="WBR-mf-CvY" id="ag5-6E-zhD"/>
                         <outlet property="lblReferralCode" destination="AbH-KT-gtE" id="Y3G-6Y-AEA"/>
                         <outlet property="lblWalletBalance" destination="cPH-tG-ywE" id="5zy-Vd-LH1"/>
                         <outlet property="viewUserPic" destination="Y43-e5-iBg" id="EsD-JX-6Df"/>
@@ -4715,6 +4721,198 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ws4-pB-07i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3782.608695652174" y="829.6875"/>
+        </scene>
+        <!--Personal Details View Controller-->
+        <scene sceneID="3cx-38-40L">
+            <objects>
+                <viewController storyboardIdentifier="PersonalDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OgU-eJ-FdV" customClass="PersonalDetailsViewController" customModule="CryptoExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GmI-rk-rry">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3d-bR-3pC">
+                                <rect key="frame" x="137" y="88" width="140" height="140"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQn-gU-tgq">
+                                        <rect key="frame" x="1" y="2.5" width="138" height="135"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <color key="tintColor" name="redPop"/>
+                                        <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="backgroundPop"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="383-sx-EiV"/>
+                                    <constraint firstItem="JQn-gU-tgq" firstAttribute="top" secondItem="P3d-bR-3pC" secondAttribute="top" constant="1" id="Iq1-sn-bq5"/>
+                                    <constraint firstItem="JQn-gU-tgq" firstAttribute="leading" secondItem="P3d-bR-3pC" secondAttribute="leading" constant="1" id="L8I-jJ-gcY"/>
+                                    <constraint firstAttribute="bottom" secondItem="JQn-gU-tgq" secondAttribute="bottom" constant="1" id="X8O-Gt-nnU"/>
+                                    <constraint firstAttribute="trailing" secondItem="JQn-gU-tgq" secondAttribute="trailing" constant="1" id="egc-qG-dCY"/>
+                                    <constraint firstAttribute="width" constant="140" id="siq-4y-abD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="td5-rN-Yi3">
+                                <rect key="frame" x="44" y="272" width="326" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Zm-he-ABP">
+                                        <rect key="frame" x="1" y="1" width="324" height="42"/>
+                                        <subviews>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aCa-zJ-Z1L">
+                                                <rect key="frame" x="12" y="2" width="300" height="38"/>
+                                                <color key="textColor" name="yellowPop"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                        <color key="value" red="1" green="0.98400002720000002" blue="0.21999999880000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" name="backgroundPop"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aCa-zJ-Z1L" secondAttribute="trailing" constant="12" id="NHp-qf-u0X"/>
+                                            <constraint firstAttribute="bottom" secondItem="aCa-zJ-Z1L" secondAttribute="bottom" constant="2" id="b75-YP-RLm"/>
+                                            <constraint firstItem="aCa-zJ-Z1L" firstAttribute="leading" secondItem="0Zm-he-ABP" secondAttribute="leading" constant="12" id="tDg-E8-2g4"/>
+                                            <constraint firstItem="aCa-zJ-Z1L" firstAttribute="top" secondItem="0Zm-he-ABP" secondAttribute="top" constant="2" id="x8a-vp-fPE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="yellowPop"/>
+                                <constraints>
+                                    <constraint firstItem="0Zm-he-ABP" firstAttribute="top" secondItem="td5-rN-Yi3" secondAttribute="top" constant="1" id="HrY-Ps-oy5"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Zm-he-ABP" secondAttribute="trailing" constant="1" id="SBh-MY-MIe"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Zm-he-ABP" secondAttribute="bottom" constant="1" id="j7r-cw-0Ow"/>
+                                    <constraint firstItem="0Zm-he-ABP" firstAttribute="leading" secondItem="td5-rN-Yi3" secondAttribute="leading" constant="1" id="mpd-9J-Gvp"/>
+                                    <constraint firstAttribute="height" constant="44" id="q81-OJ-wOi"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtR-26-rQe">
+                                <rect key="frame" x="44" y="360" width="326" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfm-ne-lck">
+                                        <rect key="frame" x="1" y="1" width="324" height="42"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Qgk-jc-ppg">
+                                                <rect key="frame" x="12" y="2" width="300" height="38"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of Birth" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="33k-KB-Qkf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="264" height="38"/>
+                                                        <color key="textColor" name="yellowPop"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" red="1" green="0.98400002720000002" blue="0.21999999880000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjo-8r-1Xb">
+                                                        <rect key="frame" x="276" y="0.0" width="24" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="zgC-Xp-qi1"/>
+                                                        </constraints>
+                                                        <color key="tintColor" name="redPop"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="calendar.badge.plus" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="btnCalender:" destination="OgU-eJ-FdV" eventType="touchUpInside" id="zr2-2C-xAh"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="backgroundPop"/>
+                                        <constraints>
+                                            <constraint firstItem="Qgk-jc-ppg" firstAttribute="leading" secondItem="Tfm-ne-lck" secondAttribute="leading" constant="12" id="CGR-GW-lbh"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qgk-jc-ppg" secondAttribute="trailing" constant="12" id="I0U-vp-C94"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qgk-jc-ppg" secondAttribute="bottom" constant="2" id="SDH-Rz-iiY"/>
+                                            <constraint firstItem="Qgk-jc-ppg" firstAttribute="top" secondItem="Tfm-ne-lck" secondAttribute="top" constant="2" id="kTH-mK-kaj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="yellowPop"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Tfm-ne-lck" secondAttribute="trailing" constant="1" id="53J-Ii-vkb"/>
+                                    <constraint firstAttribute="height" constant="44" id="8XJ-Nr-t0y"/>
+                                    <constraint firstItem="Tfm-ne-lck" firstAttribute="leading" secondItem="qtR-26-rQe" secondAttribute="leading" constant="1" id="Wk9-Ce-VwF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tfm-ne-lck" secondAttribute="bottom" constant="1" id="e4c-Ql-2aS"/>
+                                    <constraint firstItem="Tfm-ne-lck" firstAttribute="top" secondItem="qtR-26-rQe" secondAttribute="top" constant="1" id="jG2-9U-n6B"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIc-i2-2iZ">
+                                <rect key="frame" x="44" y="794" width="326" height="44"/>
+                                <color key="backgroundColor" name="redPop"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kx1-CR-cJH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <color key="baseForegroundColor" name="backgroundPop"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnContinue:" destination="OgU-eJ-FdV" eventType="touchUpInside" id="QHA-Ad-kVk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lzf-ov-Mra"/>
+                        <color key="backgroundColor" name="backgroundPop"/>
+                        <constraints>
+                            <constraint firstItem="lzf-ov-Mra" firstAttribute="trailing" secondItem="qtR-26-rQe" secondAttribute="trailing" constant="44" id="Eh0-P4-MSp"/>
+                            <constraint firstItem="lzf-ov-Mra" firstAttribute="trailing" secondItem="td5-rN-Yi3" secondAttribute="trailing" constant="44" id="Emf-Pb-LXT"/>
+                            <constraint firstItem="td5-rN-Yi3" firstAttribute="top" secondItem="P3d-bR-3pC" secondAttribute="bottom" constant="44" id="Hnn-Oq-6b3"/>
+                            <constraint firstItem="lzf-ov-Mra" firstAttribute="bottom" secondItem="MIc-i2-2iZ" secondAttribute="bottom" constant="24" id="LyI-x0-WMv"/>
+                            <constraint firstItem="MIc-i2-2iZ" firstAttribute="leading" secondItem="lzf-ov-Mra" secondAttribute="leading" constant="44" id="SSe-NX-ysz"/>
+                            <constraint firstItem="qtR-26-rQe" firstAttribute="leading" secondItem="lzf-ov-Mra" secondAttribute="leading" constant="44" id="bcD-Ez-7dV"/>
+                            <constraint firstItem="lzf-ov-Mra" firstAttribute="trailing" secondItem="MIc-i2-2iZ" secondAttribute="trailing" constant="44" id="cMw-VK-yom"/>
+                            <constraint firstItem="P3d-bR-3pC" firstAttribute="centerX" secondItem="GmI-rk-rry" secondAttribute="centerX" id="ch1-vX-gVh"/>
+                            <constraint firstItem="td5-rN-Yi3" firstAttribute="leading" secondItem="GmI-rk-rry" secondAttribute="leading" constant="44" id="cne-SL-MBH"/>
+                            <constraint firstItem="qtR-26-rQe" firstAttribute="top" secondItem="td5-rN-Yi3" secondAttribute="bottom" constant="44" id="nnM-AC-rmz"/>
+                            <constraint firstItem="P3d-bR-3pC" firstAttribute="top" secondItem="lzf-ov-Mra" secondAttribute="top" constant="44" id="ymI-NE-0Kc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCalender" destination="Zjo-8r-1Xb" id="8Gm-Wi-S3d"/>
+                        <outlet property="btnContinue" destination="MIc-i2-2iZ" id="DTM-kL-L3S"/>
+                        <outlet property="ivUser" destination="JQn-gU-tgq" id="Y00-co-C5k"/>
+                        <outlet property="tfDob" destination="33k-KB-Qkf" id="SCq-bI-2WH"/>
+                        <outlet property="tfName" destination="aCa-zJ-Z1L" id="cJj-X6-BBf"/>
+                        <outlet property="viewUserPic" destination="P3d-bR-3pC" id="wKK-oj-I4W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSG-uJ-YM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4703" y="830"/>
+        </scene>
+        <!--Pan Card Details View Controller-->
+        <scene sceneID="fI8-bN-IQV">
+            <objects>
+                <viewController storyboardIdentifier="PanCardDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bi6-wh-T89" customClass="PanCardDetailsViewController" customModule="CryptoExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O1t-Iv-RLw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iQw-SY-BOU"/>
+                        <color key="backgroundColor" name="backgroundPop"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9n-Ow-kw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5613" y="830"/>
+        </scene>
+        <!--Aadhaar Details View Controller-->
+        <scene sceneID="LHt-Y2-jij">
+            <objects>
+                <viewController storyboardIdentifier="AadhaarDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Unq-z7-q19" customClass="AadhaarDetailsViewController" customModule="CryptoExchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8BY-QH-dee">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yWa-Bs-v3o"/>
+                        <color key="backgroundColor" name="backgroundPop"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K1d-ZQ-bho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6503" y="830"/>
         </scene>
         <!--Security View Controller-->
         <scene sceneID="KgR-er-cZe">
@@ -4804,7 +5002,6 @@
                                     <color key="baseForegroundColor" name="backgroundPop"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="btnDeposit:" destination="gvW-Jv-SyU" eventType="touchUpInside" id="9Fe-mg-eQX"/>
                                     <action selector="btnSubmit:" destination="QrG-ii-df3" eventType="touchUpInside" id="EYR-px-ywP"/>
                                 </connections>
                             </button>
@@ -5143,6 +5340,7 @@
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="building.columns.fill" catalog="system" width="128" height="113"/>
+        <image name="calendar.badge.plus" catalog="system" width="128" height="108"/>
         <image name="capsule.fill" catalog="system" width="128" height="94"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="chart.line.uptrend.xyaxis" catalog="system" width="128" height="101"/>

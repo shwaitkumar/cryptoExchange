@@ -21,6 +21,7 @@ class ReferAndEarnViewController : BaseUIViewController {
     
     @IBOutlet weak var lblReferralCode: UILabel!
     @IBOutlet weak var lblWalletBalance: UILabel!
+    @IBOutlet weak var lblName: UILabel!
     
     var referralCode = ""
     
@@ -44,6 +45,8 @@ class ReferAndEarnViewController : BaseUIViewController {
         
         let randomGeneratedNumber = Int.random(in: 1..<6)
         setGiftImage(randomNumber: randomGeneratedNumber)
+        
+        getUserDetails()
         
     }
     
@@ -94,6 +97,19 @@ class ReferAndEarnViewController : BaseUIViewController {
     func setGiftImage(randomNumber : Int) {
         
         ivGift.image = UIImage(named: "gift\(randomNumber)")
+        
+    }
+    
+    func getUserDetails() {
+        
+        if BaseUIViewController.getUserDefault(key: "fullName") != "" {
+            lblName.text = BaseUIViewController.getUserDefault(key: "fullName")
+        }
+        else {
+            lblName.text = "Hi!"
+        }
+        
+        lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         
     }
     

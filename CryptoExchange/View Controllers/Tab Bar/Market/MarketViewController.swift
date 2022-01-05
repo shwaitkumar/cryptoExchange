@@ -17,6 +17,7 @@ class MarketViewController : BaseUIViewController {
     @IBOutlet weak var tblMarket: UITableView!
     
     @IBOutlet weak var lblWalletBalance: UILabel!
+    @IBOutlet weak var lblName: UILabel!
     
     var coinCurrentPrice = 0.0
     
@@ -52,24 +53,16 @@ class MarketViewController : BaseUIViewController {
     
     func getUserDetails() {
         
-        if BaseUIViewController.getUserDefault(key: "amount") == "" {
-            BaseUIViewController.setUserDefault(value: "100", key: "amount")
-        }
-        else if BaseUIViewController.getUserDefault(key: "walletBalance") == "" {
-            BaseUIViewController.setUserDefault(value: "999999", key: "walletBalance")
-            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
-        }
-        else if BaseUIViewController.getUserDefault(key: "coinPrice") == "" {
-            BaseUIViewController.setUserDefault(value: "4365671.79", key: "coinPrice")
-            coinCurrentPrice = 4365671.79
+        if BaseUIViewController.getUserDefault(key: "fullName") != "" {
+            lblName.text = "Hi" + " " + BaseUIViewController.getUserDefault(key: "fullName") + "!"
         }
         else {
-            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
-            coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
+            lblName.text = "Hi!"
         }
         
+        lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
+        
     }
-
     
 }
 

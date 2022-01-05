@@ -55,28 +55,23 @@ extension AccountSettingsViewController : UITableViewDelegate, UITableViewDataSo
         
         if indexPath.row == 0 {
             
-            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "PersonalDetailsViewController") as! PersonalDetailsViewController
+            navigationController?.pushViewController(vc, animated: true)
             
         }
         else if indexPath.row == 1 {
             
-            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "PanCardDetailsViewController") as! PanCardDetailsViewController
+            navigationController?.pushViewController(vc, animated: true)
             
         }
         else {
             
-            showAlert(Message: "Feature not available yet", Title: "Crypto Exchange")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "AadhaarDetailsViewController") as! AadhaarDetailsViewController
+            navigationController?.pushViewController(vc, animated: true)
             
         }
         
-    }
-    
-    func showAlert(Message:String, Title: String){
-    
-        let alert = UIAlertController (title: Title, message: Message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler:{ (alertOKAction) in }))
-        self.present(alert, animated: true, completion: nil)
-    
     }
     
 }

@@ -17,6 +17,7 @@ class PortfolioViewController : BaseUIViewController {
     @IBOutlet weak var tblPortfolio: UITableView!
     
     @IBOutlet weak var lblWalletBalance: UILabel!
+    @IBOutlet weak var lblName: UILabel!
     
     var coinCurrentPrice = 0.0
     
@@ -33,14 +34,14 @@ class PortfolioViewController : BaseUIViewController {
         
         let tapPersonalView = UITapGestureRecognizer(target: self, action:  #selector(self.viewPersonalTapped))
         viewPersonal.addGestureRecognizer(tapPersonalView)
-        
+                
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         navigationController?.navigationBar.isHidden = true
         
-       getUserDetails()
+        getUserDetails()
         
     }
     
@@ -52,21 +53,14 @@ class PortfolioViewController : BaseUIViewController {
     
     func getUserDetails() {
         
-        if BaseUIViewController.getUserDefault(key: "amount") == "" {
-            BaseUIViewController.setUserDefault(value: "100", key: "amount")
-        }
-        else if BaseUIViewController.getUserDefault(key: "walletBalance") == "" {
-            BaseUIViewController.setUserDefault(value: "999999", key: "walletBalance")
-            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
-        }
-        else if BaseUIViewController.getUserDefault(key: "coinPrice") == "" {
-            BaseUIViewController.setUserDefault(value: "4365671.79", key: "coinPrice")
-            coinCurrentPrice = 4365671.79
+        if BaseUIViewController.getUserDefault(key: "fullName") != "" {
+            lblName.text = "Hi" + " " + BaseUIViewController.getUserDefault(key: "fullName") + "!"
         }
         else {
-            lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
-            coinCurrentPrice = Double(BaseUIViewController.getUserDefault(key: "coinPrice"))!
+            lblName.text = "Hi!"
         }
+        
+        lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         
     }
 
