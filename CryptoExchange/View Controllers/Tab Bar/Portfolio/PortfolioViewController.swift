@@ -54,7 +54,8 @@ class PortfolioViewController : BaseUIViewController {
     func getUserDetails() {
         
         if BaseUIViewController.getUserDefault(key: "fullName") != "" {
-            lblName.text = "Hi" + " " + BaseUIViewController.getUserDefault(key: "fullName") + "!"
+            let name = Name(fullName: BaseUIViewController.getUserDefault(key: "fullName"))
+            lblName.text = "Hi" + " " + name.first + "!"
         }
         else {
             lblName.text = "Hi!"

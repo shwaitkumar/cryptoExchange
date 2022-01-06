@@ -142,21 +142,28 @@ extension UIViewController {
     
 }
 
-//extension UIImage {
-//    func fixOrientation() -> UIImage {
-//        if self.imageOrientation == UIImage.Orientation.up {
-//            return self
-//        }
-//        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
-//        self.draw(in: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
-//        if let normalizedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext() {
-//            UIGraphicsEndImageContext()
-//            return normalizedImage
-//        } else {
-//            return self
-//        }
-//    }
-//}
+struct Name {
+    let first: String
+    let last: String
+
+    init(first: String, last: String) {
+        self.first = first
+        self.last = last
+    }
+}
+
+extension Name {
+    init(fullName: String) {
+        var names = fullName.components(separatedBy: " ")
+        let first = names.removeFirst()
+        let last = names.joined(separator: " ")
+        self.init(first: first, last: last)
+    }
+}
+
+extension Name: CustomStringConvertible {
+    var description: String { return "\(first) \(last)" }
+}
 
 extension UIImage {
     /// Fix image orientaton to protrait up
