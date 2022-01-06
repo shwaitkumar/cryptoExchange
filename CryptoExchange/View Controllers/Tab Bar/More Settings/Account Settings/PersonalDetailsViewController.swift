@@ -48,9 +48,6 @@ class PersonalDetailsViewController : BaseUIViewController {
         let nameTf = cell!.viewWithTag(1) as! UITextField
         let dobTf = cell!.viewWithTag(2) as! UITextField
         
-        debugPrint("amount - ",nameTf.text!)
-        debugPrint("amount - ",dobTf.text!)
-        
         let nameInString = nameTf.text!
         let dobInString = dobTf.text!
         
