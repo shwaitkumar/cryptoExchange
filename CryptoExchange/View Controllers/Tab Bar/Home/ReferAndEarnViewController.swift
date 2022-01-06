@@ -111,6 +111,14 @@ class ReferAndEarnViewController : BaseUIViewController {
         
         lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         
+        if BaseUIViewController.getUserDefault(key: "userPic") != "" {
+            let userBase64 = BaseUIViewController.getUserDefault(key: "userPic")
+            let dataDecoded : Data = Data(base64Encoded: userBase64, options: .ignoreUnknownCharacters)!
+            let decodedimage:UIImage = UIImage(data: dataDecoded as Data)!
+            print(decodedimage)
+            ivUser.image = decodedimage
+        }
+        
     }
     
 }

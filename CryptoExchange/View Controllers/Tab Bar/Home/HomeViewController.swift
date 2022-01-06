@@ -159,6 +159,14 @@ class HomeViewController : BaseUIViewController {
             lblName.text = "Hi!"
         }
         
+        if BaseUIViewController.getUserDefault(key: "userPic") != "" {
+            let userBase64 = BaseUIViewController.getUserDefault(key: "userPic")
+            let dataDecoded : Data = Data(base64Encoded: userBase64, options: .ignoreUnknownCharacters)!
+            let decodedimage:UIImage = UIImage(data: dataDecoded as Data)!
+            print(decodedimage)
+            ivUserPic.image = decodedimage
+        }
+        
     }
     
 }

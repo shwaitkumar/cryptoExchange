@@ -584,20 +584,31 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NFb-i5-6cZ">
                                             <rect key="frame" x="334" y="61.5" width="56" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EuN-7c-dDi">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VpO-0N-zbf">
                                                     <rect key="frame" x="1" y="2.5" width="54" height="51"/>
                                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                    <color key="tintColor" name="redPop"/>
-                                                    <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
+                                                    <color key="tintColor" name="yellowPop"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="27"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EuN-7c-dDi">
+                                                    <rect key="frame" x="1" y="1" width="54" height="54"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" name="backgroundPop"/>
                                             <constraints>
                                                 <constraint firstItem="EuN-7c-dDi" firstAttribute="leading" secondItem="NFb-i5-6cZ" secondAttribute="leading" constant="1" id="DaN-FL-7wk"/>
+                                                <constraint firstAttribute="trailing" secondItem="VpO-0N-zbf" secondAttribute="trailing" constant="1" id="Gb2-Px-4UY"/>
                                                 <constraint firstAttribute="bottom" secondItem="EuN-7c-dDi" secondAttribute="bottom" constant="1" id="JS2-Jw-gQi"/>
                                                 <constraint firstAttribute="height" constant="56" id="Zkn-2i-Rhh"/>
+                                                <constraint firstAttribute="bottom" secondItem="VpO-0N-zbf" secondAttribute="bottom" constant="1" id="ag1-mk-L3x"/>
                                                 <constraint firstAttribute="width" constant="56" id="cys-Gv-O6G"/>
                                                 <constraint firstItem="EuN-7c-dDi" firstAttribute="top" secondItem="NFb-i5-6cZ" secondAttribute="top" constant="1" id="e5b-us-KqN"/>
+                                                <constraint firstItem="VpO-0N-zbf" firstAttribute="leading" secondItem="NFb-i5-6cZ" secondAttribute="leading" constant="1" id="fyb-3n-a84"/>
+                                                <constraint firstItem="VpO-0N-zbf" firstAttribute="top" secondItem="NFb-i5-6cZ" secondAttribute="top" constant="1" id="ndT-Ir-Chg"/>
                                                 <constraint firstAttribute="trailing" secondItem="EuN-7c-dDi" secondAttribute="trailing" constant="1" id="zKd-ba-EED"/>
                                             </constraints>
                                         </view>
@@ -1612,11 +1623,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqZ-FR-Fkb">
                                         <rect key="frame" x="157" y="44" width="100" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwY-gM-MXv">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xLX-X9-q8c">
                                                 <rect key="frame" x="1" y="2.5" width="98" height="95"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                <color key="tintColor" name="redPop"/>
-                                                <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
+                                                <color key="tintColor" name="yellowPop"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="49"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwY-gM-MXv">
+                                                <rect key="frame" x="1" y="1" width="98" height="98"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="backgroundPop"/>
@@ -1624,7 +1642,11 @@
                                             <constraint firstItem="nwY-gM-MXv" firstAttribute="top" secondItem="rqZ-FR-Fkb" secondAttribute="top" constant="1" id="4CQ-F0-BSP"/>
                                             <constraint firstItem="nwY-gM-MXv" firstAttribute="leading" secondItem="rqZ-FR-Fkb" secondAttribute="leading" constant="1" id="5OV-vW-0lR"/>
                                             <constraint firstAttribute="width" constant="100" id="9E6-ly-2Fe"/>
+                                            <constraint firstItem="xLX-X9-q8c" firstAttribute="leading" secondItem="rqZ-FR-Fkb" secondAttribute="leading" constant="1" id="U87-hs-Cp9"/>
                                             <constraint firstAttribute="height" constant="100" id="Yws-eb-thj"/>
+                                            <constraint firstItem="xLX-X9-q8c" firstAttribute="top" secondItem="rqZ-FR-Fkb" secondAttribute="top" constant="1" id="clQ-Wa-qPD"/>
+                                            <constraint firstAttribute="trailing" secondItem="xLX-X9-q8c" secondAttribute="trailing" constant="1" id="eor-yX-54y"/>
+                                            <constraint firstAttribute="bottom" secondItem="xLX-X9-q8c" secondAttribute="bottom" constant="1" id="hKV-sr-sDf"/>
                                             <constraint firstAttribute="bottom" secondItem="nwY-gM-MXv" secondAttribute="bottom" constant="1" id="hUM-WK-jCe"/>
                                             <constraint firstAttribute="trailing" secondItem="nwY-gM-MXv" secondAttribute="trailing" constant="1" id="o3o-Ty-tAi"/>
                                         </constraints>
@@ -2480,17 +2502,28 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJV-z1-jZp">
                                             <rect key="frame" x="334" y="61.5" width="56" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KNb-wF-ejF">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qw3-0h-pYW">
+                                                    <rect key="frame" x="1" y="2.5" width="54" height="51"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="tintColor" name="yellowPop"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="27"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KNb-wF-ejF">
                                                     <rect key="frame" x="1" y="2.5" width="54" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                    <color key="tintColor" name="redPop"/>
-                                                    <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" name="backgroundPop"/>
                                             <constraints>
+                                                <constraint firstItem="qw3-0h-pYW" firstAttribute="leading" secondItem="OJV-z1-jZp" secondAttribute="leading" constant="1" id="AHk-6Z-X5g"/>
                                                 <constraint firstAttribute="width" constant="56" id="NcU-7j-nem"/>
+                                                <constraint firstAttribute="trailing" secondItem="qw3-0h-pYW" secondAttribute="trailing" constant="1" id="On5-6z-5l6"/>
+                                                <constraint firstAttribute="bottom" secondItem="qw3-0h-pYW" secondAttribute="bottom" constant="1" id="bvk-FB-pfH"/>
+                                                <constraint firstItem="qw3-0h-pYW" firstAttribute="top" secondItem="OJV-z1-jZp" secondAttribute="top" constant="1" id="nDs-qM-xpt"/>
                                                 <constraint firstAttribute="height" constant="56" id="puN-Nt-jbS"/>
                                             </constraints>
                                         </view>
@@ -2795,18 +2828,29 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6T-MU-WZI">
                                             <rect key="frame" x="334" y="61.5" width="56" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVX-7q-SJc">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lCU-0S-bvW">
+                                                    <rect key="frame" x="1" y="2.5" width="54" height="51"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="tintColor" name="yellowPop"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="27"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVX-7q-SJc">
                                                     <rect key="frame" x="1" y="2.5" width="54" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                    <color key="tintColor" name="redPop"/>
-                                                    <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" name="backgroundPop"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="56" id="4Ny-cP-8tM"/>
+                                                <constraint firstItem="lCU-0S-bvW" firstAttribute="leading" secondItem="I6T-MU-WZI" secondAttribute="leading" constant="1" id="C9D-Cu-KCi"/>
+                                                <constraint firstAttribute="bottom" secondItem="lCU-0S-bvW" secondAttribute="bottom" constant="1" id="R1x-8R-sNk"/>
                                                 <constraint firstAttribute="height" constant="56" id="kdu-vY-wrZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="lCU-0S-bvW" secondAttribute="trailing" constant="1" id="yO8-PE-X3Z"/>
+                                                <constraint firstItem="lCU-0S-bvW" firstAttribute="top" secondItem="I6T-MU-WZI" secondAttribute="top" constant="1" id="yOa-Hd-k6Q"/>
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="c9q-K9-dS5">
@@ -3052,18 +3096,29 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUI-XM-zCL">
                                             <rect key="frame" x="334" y="61.5" width="56" height="56"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Dm-V6-8s7">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U0l-JX-aJn">
+                                                    <rect key="frame" x="1" y="2.5" width="54" height="51"/>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <color key="tintColor" name="yellowPop"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="27"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Dm-V6-8s7">
                                                     <rect key="frame" x="1" y="2.5" width="54" height="51"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                    <color key="tintColor" name="redPop"/>
-                                                    <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" name="backgroundPop"/>
                                             <constraints>
+                                                <constraint firstItem="U0l-JX-aJn" firstAttribute="top" secondItem="SUI-XM-zCL" secondAttribute="top" constant="1" id="GCy-NF-2xt"/>
+                                                <constraint firstItem="U0l-JX-aJn" firstAttribute="leading" secondItem="SUI-XM-zCL" secondAttribute="leading" constant="1" id="JwW-iY-0uf"/>
+                                                <constraint firstAttribute="bottom" secondItem="U0l-JX-aJn" secondAttribute="bottom" constant="1" id="L13-dL-9Gz"/>
                                                 <constraint firstAttribute="width" constant="56" id="cWM-fd-5rl"/>
                                                 <constraint firstAttribute="height" constant="56" id="j7L-qz-ohi"/>
+                                                <constraint firstAttribute="trailing" secondItem="U0l-JX-aJn" secondAttribute="trailing" constant="1" id="tJc-JW-NA6"/>
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="s9L-i4-m0g">
@@ -4390,19 +4445,30 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y43-e5-iBg">
                                         <rect key="frame" x="157" y="44" width="100" height="100"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2RZ-e9-737">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BiQ-KS-Uy4">
                                                 <rect key="frame" x="1" y="2.5" width="98" height="95"/>
                                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                <color key="tintColor" name="redPop"/>
-                                                <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
+                                                <color key="tintColor" name="yellowPop"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="49"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2RZ-e9-737">
+                                                <rect key="frame" x="1" y="1" width="98" height="98"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" name="backgroundPop"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="2RZ-e9-737" secondAttribute="bottom" constant="1" id="0S7-IM-mco"/>
+                                            <constraint firstAttribute="trailing" secondItem="BiQ-KS-Uy4" secondAttribute="trailing" constant="1" id="Co9-1f-7fp"/>
+                                            <constraint firstAttribute="bottom" secondItem="BiQ-KS-Uy4" secondAttribute="bottom" constant="1" id="Dn5-nz-ACC"/>
+                                            <constraint firstItem="BiQ-KS-Uy4" firstAttribute="top" secondItem="Y43-e5-iBg" secondAttribute="top" constant="1" id="H2e-u3-Fut"/>
                                             <constraint firstAttribute="height" constant="100" id="IAd-c3-Npp"/>
                                             <constraint firstItem="2RZ-e9-737" firstAttribute="leading" secondItem="Y43-e5-iBg" secondAttribute="leading" constant="1" id="KVO-Rm-05s"/>
                                             <constraint firstAttribute="trailing" secondItem="2RZ-e9-737" secondAttribute="trailing" constant="1" id="XAI-uc-nbd"/>
+                                            <constraint firstItem="BiQ-KS-Uy4" firstAttribute="leading" secondItem="Y43-e5-iBg" secondAttribute="leading" constant="1" id="h8Y-7H-cFV"/>
                                             <constraint firstItem="2RZ-e9-737" firstAttribute="top" secondItem="Y43-e5-iBg" secondAttribute="top" constant="1" id="nDU-lp-IgK"/>
                                             <constraint firstAttribute="width" constant="100" id="vJ0-c4-8O5"/>
                                         </constraints>
@@ -4759,21 +4825,46 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3d-bR-3pC">
                                                     <rect key="frame" x="137" y="44" width="140" height="140"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQn-gU-tgq">
-                                                            <rect key="frame" x="1" y="2.5" width="138" height="135"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CbI-7T-fcT">
+                                                            <rect key="frame" x="1" y="1.5" width="138" height="137.5"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                             <color key="tintColor" name="redPop"/>
-                                                            <imageReference key="image" image="person.fill" catalog="system" symbolScale="default"/>
+                                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="69"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQn-gU-tgq">
+                                                            <rect key="frame" x="1" y="1" width="138" height="138"/>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZb-eH-bYy">
+                                                            <rect key="frame" x="1" y="1" width="138" height="138"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="69"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" name="backgroundPop"/>
                                                     <constraints>
+                                                        <constraint firstItem="CbI-7T-fcT" firstAttribute="leading" secondItem="P3d-bR-3pC" secondAttribute="leading" constant="1" id="0F0-cB-8TG"/>
                                                         <constraint firstAttribute="height" constant="140" id="383-sx-EiV"/>
+                                                        <constraint firstAttribute="trailing" secondItem="bZb-eH-bYy" secondAttribute="trailing" constant="1" id="5eO-xB-tpL"/>
+                                                        <constraint firstItem="bZb-eH-bYy" firstAttribute="leading" secondItem="P3d-bR-3pC" secondAttribute="leading" constant="1" id="8Ry-Rl-eFY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="CbI-7T-fcT" secondAttribute="bottom" constant="1" id="DpU-Hu-6Rw"/>
                                                         <constraint firstItem="JQn-gU-tgq" firstAttribute="top" secondItem="P3d-bR-3pC" secondAttribute="top" constant="1" id="Iq1-sn-bq5"/>
                                                         <constraint firstItem="JQn-gU-tgq" firstAttribute="leading" secondItem="P3d-bR-3pC" secondAttribute="leading" constant="1" id="L8I-jJ-gcY"/>
                                                         <constraint firstAttribute="bottom" secondItem="JQn-gU-tgq" secondAttribute="bottom" constant="1" id="X8O-Gt-nnU"/>
+                                                        <constraint firstItem="bZb-eH-bYy" firstAttribute="top" secondItem="P3d-bR-3pC" secondAttribute="top" constant="1" id="b2A-oV-T4D"/>
                                                         <constraint firstAttribute="trailing" secondItem="JQn-gU-tgq" secondAttribute="trailing" constant="1" id="egc-qG-dCY"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CbI-7T-fcT" secondAttribute="trailing" constant="1" id="n34-IR-hJ8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="bZb-eH-bYy" secondAttribute="bottom" constant="1" id="pmc-17-uGL"/>
                                                         <constraint firstAttribute="width" constant="140" id="siq-4y-abD"/>
+                                                        <constraint firstItem="CbI-7T-fcT" firstAttribute="top" secondItem="P3d-bR-3pC" secondAttribute="top" constant="1" id="v0V-bl-FvG"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="td5-rN-Yi3">
@@ -4881,6 +4972,7 @@
                                             <outlet property="ivUser" destination="JQn-gU-tgq" id="wYv-fV-BXb"/>
                                             <outlet property="tfDob" destination="33k-KB-Qkf" id="CXo-5a-KPP"/>
                                             <outlet property="tfName" destination="aCa-zJ-Z1L" id="saN-tY-ht1"/>
+                                            <outlet property="viewOverImage" destination="bZb-eH-bYy" id="3l3-4M-93H"/>
                                             <outlet property="viewUserPic" destination="P3d-bR-3pC" id="Da9-hf-x8A"/>
                                         </connections>
                                     </tableViewCell>
@@ -5687,7 +5779,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FeV-Cd-605"/>
+        <segue reference="X4u-XT-dan"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="QRCode" width="300" height="300"/>
@@ -5714,6 +5806,7 @@
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.98400002717971802" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

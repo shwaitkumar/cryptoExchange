@@ -73,6 +73,14 @@ class MoreViewController : UIViewController {
         
         lblWalletBalance.text = " ₹\(BaseUIViewController.getUserDefault(key: "walletBalance"))"
         
+        if BaseUIViewController.getUserDefault(key: "userPic") != "" {
+            let userBase64 = BaseUIViewController.getUserDefault(key: "userPic")
+            let dataDecoded : Data = Data(base64Encoded: userBase64, options: .ignoreUnknownCharacters)!
+            let decodedimage:UIImage = UIImage(data: dataDecoded as Data)!
+            print(decodedimage)
+            ivUser.image = decodedimage
+        }
+        
     }
     
 }
@@ -114,6 +122,8 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
         else {
             cell.ivIcon.image = UIImage(systemName: "rectangle.portrait.and.arrow.right.fill")
             cell.lblTitle.text = "Logout"
+            cell.ivIcon.tintColor = UIColor(named: "redPop")
+            cell.lblTitle.textColor = UIColor(named: "redPop")
         }
         
         return cell
