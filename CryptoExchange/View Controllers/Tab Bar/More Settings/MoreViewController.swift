@@ -160,12 +160,26 @@ extension MoreViewController : UITableViewDelegate, UITableViewDataSource {
         }
         else {
             
-            let domain = Bundle.main.bundleIdentifier!
-            UserDefaults.standard.removePersistentDomain(forName: domain)
-            UserDefaults.standard.synchronize()
-            print(Array(UserDefaults.standard.dictionaryRepresentation().keys).count)
+            let alert = UIAlertController.init(title: "Logout", message: "Are you sure you want to Logout", preferredStyle: .alert)
+            let no = UIAlertAction(title: "No", style: .cancel) { (aelrt) in
+                
+                alert.dismiss(animated: false)
+            }
+            alert.addAction(no)
             
-            appDelegate.pushToLoginViewController()
+            let yes = UIAlertAction(title: "Yes", style: .default) { [self] (aelrt) in
+                
+                let domain = Bundle.main.bundleIdentifier!
+                UserDefaults.standard.removePersistentDomain(forName: domain)
+                UserDefaults.standard.synchronize()
+                print(Array(UserDefaults.standard.dictionaryRepresentation().keys).count)
+                
+                self.appDelegate.pushToLoginViewController()
+                
+            }
+            alert.addAction(yes)
+            
+            self.present(alert, animated: true)
             
         }
         
