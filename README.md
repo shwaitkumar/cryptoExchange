@@ -14,4 +14,4 @@ Note: Any further chnages beyond this point will be made in seperate branch.
 
 ## Screenshots:
 
-![mockUpcryptoexchange](https://user-images.githubusercontent.com/25391160/148378668-476d205b-eb37-4cab-90d4-a7df2c96a989.jpg)
+![mockUpcryptoexchange](https://user-images.githubusercontent.com/25391160/148379395-b0e3bc33-fcd4-4e6e-bece-2421d683b925.jpg)
